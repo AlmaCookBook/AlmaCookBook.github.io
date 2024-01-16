@@ -15,7 +15,7 @@ Conda
 ***  
 Workflows
 1. Scripts
-2. Nextflow
+2. [Nextflow](workflows/nextflow.md)
 
 
 
