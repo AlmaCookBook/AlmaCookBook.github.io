@@ -1,0 +1,8 @@
+site_name: AlmaCookBook
+nav:
+  - Home: 'index.md'
+  - About: 'about.md'
+  - Workflows:
+    - 'Nextflow': 'workflows/nextflow.md'
+theme:
+  name: readthedocs
