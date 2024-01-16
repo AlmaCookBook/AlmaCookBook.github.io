@@ -2,6 +2,9 @@ site_name: AlmaCookBook
 nav:
   - Home: 'index.md'
   - About: 'about.md'
+  - Conda:
+    - 'Overview': 'conda/overview.md'
+    - 'Basics': 'conda/basics.md'
   - Workflows:
     - 'Nextflow': 'workflows/nextflow.md'
 theme:
