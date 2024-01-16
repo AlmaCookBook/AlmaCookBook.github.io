@@ -5,4 +5,8 @@ nav:
   - Workflows:
     - 'Nextflow': 'workflows/nextflow.md'
 theme:
-  name: readthedocs
+  name: material
+  logo: assets/icr_svg_logo.svg
+  favicon: assets/icr_svg_logo.svg
+  palette:
+    primary: white
