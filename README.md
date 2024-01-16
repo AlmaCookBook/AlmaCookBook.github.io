@@ -13,5 +13,10 @@ Conda
 
 ***  
 
+***  
+Workflows
+1. Scripts
+2. Nextflow
+
 
 
