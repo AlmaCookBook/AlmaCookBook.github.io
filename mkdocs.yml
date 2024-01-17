@@ -7,6 +7,8 @@ nav:
     - 'Basics': 'conda/basics.md'
   - Workflows:
     - 'Nextflow': 'workflows/nextflow.md'
+  - Training:
+    - 'python intro': 'https://github.com/ICR-SC-Training/intro-to-python'  
 theme:
   name: material
   logo: assets/icr_svg_logo.svg
