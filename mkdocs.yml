@@ -8,7 +8,8 @@ nav:
   - Workflows:
     - 'Nextflow': 'workflows/nextflow.md'
   - Training:
-    - 'python intro': 'https://github.com/ICR-SC-Training/intro-to-python'  
+    - 'overview': 'training/overview.md'
+    - 'python intro': 'https://icr-sc-training.github.io/intro-to-python/'  
 theme:
   name: material
   logo: assets/icr_svg_logo.svg
