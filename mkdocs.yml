@@ -6,6 +6,7 @@ nav:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
   - Workflows:
+    - 'Singularity and docker': 'workflows/containers.md'
     - 'Nextflow': 'workflows/nextflow.md'
   - Training:
     - 'overview': 'training/overview.md'
