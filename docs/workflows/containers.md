@@ -18,7 +18,7 @@ singularity pull docker://icrsc/pisca-run
 
 The difference when pulling with singularity is that you provide the docker url.
 
-Generally, you just add docker:// in front of the image name.
+Generally, you just add **docker://** in front of the image name.
 
 ### Running with docker or singularity
 
@@ -31,5 +31,5 @@ The docker command is
 The singularity command is:  
 ```singularity run -B /your/xml/dir:/mnt docker://icrsc/pisca-run your.xml```  
 
-There are slight differences in the parameters between singularity and docker, in this case passing a mounted directory as a different parameter letter. Overall though, it is just the addition of  docker:// in front of the image name.
+There are slight differences in the parameters between singularity and docker, in this case passing a mounted directory as a different parameter letter. Overall though, it is just the addition of **docker://** in front of the image name.
 
