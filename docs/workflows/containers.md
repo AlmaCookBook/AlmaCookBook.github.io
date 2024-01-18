@@ -16,7 +16,7 @@ docker pull icrsc/pisca-run
 singularity pull docker://icrsc/pisca-run
 ```
 
-The difference when pulling with singularity is that you provide the docker url (docker itself already knows this).
+The difference when pulling with singularity is that you provide the docker url.
 
 Generally, you just add docker:// in front of the image name.
 
