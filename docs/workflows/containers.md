@@ -8,7 +8,7 @@ There are times when you only have access to singularity but not docker, for exa
 
 ### Devolping a custom docker image
 
-If you develop a custom docker image and upload it to dockerhub, it will be available to pull from docker in the standard way. An example of such an image managed by the ICR Software Group is: pisca-run
+If you develop a custom docker image and upload it to dockerhub, it will be available to pull from docker in the standard way. An example of such an image managed by the ICR Software Group is: [pisca-run](https://hub.docker.com/r/icrsc/pisca-run)
 
 Pull with docker or singularity
 ```
