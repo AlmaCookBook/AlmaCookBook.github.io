@@ -1,2 +1,4 @@
 # Nextflow
- etc etc
+
+
+1. [slurm vs nextflow on alma]()
