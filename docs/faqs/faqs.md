@@ -15,7 +15,7 @@ du -sh /home/ralcraft/
 ls -al
 ```
 
-### ERROR: Could not install packages due to an OSError: [Errno 122] Disk quota exceeded: '/path/to/python3.10'  
+1. ERROR: Could not install packages due to an OSError: [Errno 122] Disk quota exceeded: '/path/to/python3.10'  
 Does conda need to be cleaned out? Check for conda cache files:
 ```bash
 du -sh .conda/

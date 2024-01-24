@@ -18,5 +18,5 @@ theme:
   logo: assets/icr_svg_logo.svg  
   favicon: assets/icr_svg_logo.svg  
   palette:
-    primary: #8b0000  
+    primary: pink  
     accent: deep orange  
