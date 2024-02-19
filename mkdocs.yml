@@ -6,8 +6,10 @@ nav:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
   - Workflows:
-    - 'Singularity and docker': 'workflows/containers.md'
+    - 'Singularity and docker': 'workflows/containers.md'    
     - 'Nextflow': 'workflows/nextflow.md'
+    - 'nf-core 1) sanity check': 'workflows/nf-core-1.md'
+
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
