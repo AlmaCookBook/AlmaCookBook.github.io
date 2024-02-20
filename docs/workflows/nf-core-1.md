@@ -10,6 +10,15 @@ ssh username@alma.icr.ac.uk
 # interactive session with 10GB memory and 2 cores
 srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash    
 ```
+## Before starting
+You should have initialised mamba as part of your standard Alma setup. If you have, you will see this by default python. ```/opt/software/easybuild/software/Mamba/23.1.0-0/bin/python``` Check it by the following:
+```
+(base) [ralcraft@node01(alma)]$ which python
+/opt/software/easybuild/software/Mamba/23.1.0-0/bin/python
+(base) [ralcraft@node01(alma)]$ python --version
+Python 3.10.10
+```
+If this is not what you see, follow the instructions for initialising a mamba environment [here](../conda/basics.md) 
 
 ## Step 2: Create an nf-core directory
 
