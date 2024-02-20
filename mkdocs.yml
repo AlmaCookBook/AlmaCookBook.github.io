@@ -5,10 +5,15 @@ nav:
   - Conda:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
-  - Workflows:
-    - 'Singularity and docker': 'workflows/containers.md'    
-    - 'Nextflow': 'workflows/nextflow.md'
-    - 'nf-core 1) sanity check': 'workflows/nf-core-1.md'
+  - Workflows:  
+    - NF-CORE:
+      - 'nf-core 1: Install and test': 'workflows/nf-core-1.md'
+      - 'nf-core 2: Sarek': 'workflows/nf-core-2.md'
+    - Other:
+      - 'Singularity and docker': 'workflows/containers.md'    
+      - 'Nextflow': 'workflows/nextflow.md'
+    
+    
 
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
