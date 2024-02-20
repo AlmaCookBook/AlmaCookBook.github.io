@@ -11,7 +11,7 @@ ssh username@alma.icr.ac.uk
 srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash    
 ```
 
-## Step 2: Create an nf-core directory (or return to it)
+## Step 2: Create an nf-core directory
 
 ```bash
 cd /data/scratch/YOUR/PATH/GROUP/username/
@@ -19,7 +19,7 @@ mkdir nf-core
 cd nf-core
 ```
 
-## Step 3: Install the nf-core/tools package and python environment (or return to it)
+## Step 3: Install the nf-core/tools package and python environment
 You only need to install the python environment once, subsequently you can load it.  
 If you are already in a python environment type ```deactivate``` to exit it.
 
