@@ -28,6 +28,8 @@ theme:
   palette:
     primary: pink  
     accent: deep orange  
+  features:
+    - content.code.copy
 markdown_extensions:
   - def_list
   - pymdownx.tasklist:
