@@ -16,9 +16,6 @@ nav:
     - Other:
       - 'Singularity and docker': 'workflows/containers.md'    
       - 'Nextflow': 'workflows/nextflow.md'
-    
-    
-
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
@@ -31,3 +28,16 @@ theme:
   palette:
     primary: pink  
     accent: deep orange  
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
