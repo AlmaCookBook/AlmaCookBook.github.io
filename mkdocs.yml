@@ -16,6 +16,8 @@ nav:
     - Other:
       - 'Singularity and docker': 'workflows/containers.md'    
       - 'Nextflow': 'workflows/nextflow.md'
+  - IDEs:
+    - 'VSCode': 'ides/vscode.md'    
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
