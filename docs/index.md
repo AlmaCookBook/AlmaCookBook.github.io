@@ -8,7 +8,7 @@ These recipes are primarily targetted at computing with Alma, the ICR's HPC syst
 
 ---  
 
-Note this site is currently under construction and contains minimal content as it is delivered.
+Note this site is currently under construction and is updated with content as it is delivered.
 
 ---  
 
