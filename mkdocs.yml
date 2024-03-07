@@ -22,7 +22,7 @@ nav:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
     - 'overview': 'training/overview.md'
-    - 'python intro': 'https://icr-sc-training.github.io/intro-to-python/'  
+    - 'python intro': 'https://almacookbook.github.io/intro-to-python/'  
 theme:
   name: material  
   logo: assets/icr_svg_logo.svg  
