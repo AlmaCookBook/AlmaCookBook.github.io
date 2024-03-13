@@ -63,6 +63,7 @@ singularity {
   enabled = true
   autoMounts = true
 }
+
 process {
     queue="compute"
     executor = "SLURM"
@@ -71,16 +72,15 @@ process {
     errorStrategy = { task.exitStatus in [143,137,104,134,139,140,247] ? 'retry' : 'finish' }
     maxRetries    = 1
     maxErrors     = '-1'
-    withName: '.*' {
-        memory        = {  8.GB * task.cpus  }
-    }
 }
-params {
-  max_cpus = 48
-  max_memory = 384.GB
-  max_time = 120.h
+
+executor {
+    perCpuMemAllocation = true
 }
 ```
+
+The final section for the execution is important. It tells nextflow to use the memory allocation per CPU that we have requested. This is important as the memory allocation is different on the cluster to the local machine. Notes about this [are here](https://www.nextflow.io/docs/latest/config.html#scope-executor).
+
 
 You can now run the pipeline using the slurm cluster with this command:
 
