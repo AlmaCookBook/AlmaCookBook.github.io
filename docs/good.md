@@ -10,3 +10,6 @@ Good practices are a set of guidelines and recommendations that help ensure that
 
 ## Languages
 - [Python Good Practises](good/python)
+
+## HPC
+- [HPC Good Practises](good/hpc)
