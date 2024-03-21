@@ -1,4 +1,4 @@
-# Contnuous Integration and Continuous Deplyment
+# Continuous Integration and Continuous Deployment
 
 ## Introduction
 All languages/tools should have built in to them a form of continuous integration to automate testing and deployment. This is a key part of the software development process and is essential for ensuring that code is of high quality and is deployed quickly and efficiently. It is of particular importance in the scientific community where reproducibility is key.
