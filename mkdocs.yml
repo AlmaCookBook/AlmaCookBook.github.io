@@ -3,11 +3,17 @@ nav:
   - Home: 'index.md'
   - About: 'about.md'
   - Good practices:
-    - 'Continuous Integration': 'good/cicd.md'
-    - 'Version control': 'good/version.md'
-    - 'Python good practices': 'good/python.md'
-    - 'Packaging and deploying': 'good/packaging.md'
-    - 'Using AI' : good/ai.md
+    - 'Overview': 'good.md'
+    - Project:
+      - 'Continuous Integration': 'good/cicd.md'
+      - 'Version control': 'good/version.md'    
+      - 'Packaging and deploying': 'good/packaging.md'
+      - 'Using AI' : good/ai.md
+    - Languages:
+      - 'Python good practices': 'good/python.md'
+    - IDEs:
+      - 'VSCode': 'ides/vscode.md'
+      - 'remote-ssh': 'ides/remote.md'      
   - Conda:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
@@ -20,10 +26,7 @@ nav:
       - 'nf-core 1: Install and test': 'workflows/nf-core-1.md'
       - 'nf-core 2: Sarek': 'workflows/nf-core-2.md'
   - Containers:
-      - 'Singularity and docker': 'workflows/containers.md'
-  - IDEs:
-    - 'remote-ssh': 'ides/remote.md'
-    - 'VSCode': 'ides/vscode.md'
+      - 'Singularity and docker': 'workflows/containers.md'  
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
