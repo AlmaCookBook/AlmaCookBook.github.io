@@ -24,7 +24,6 @@ nav:
     - IDEs:
       - 'remote-ssh': 'ides/remote.md'
       - 'VSCode': 'ides/vscode.md'
-    - 
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
