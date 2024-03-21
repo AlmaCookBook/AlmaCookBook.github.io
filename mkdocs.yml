@@ -2,6 +2,9 @@ site_name: AlmaCookBook
 nav:
   - Home: 'index.md'
   - About: 'about.md'
+  - Good practices:
+    - 'Continuous Integration': 'good/cicd.md'
+    - 'Python good practices': 'good/python.md'
   - Conda:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
@@ -17,13 +20,9 @@ nav:
       - 'Nextflow': 'workflows/nextflow.md'
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'
-  - IDEs and standards:
-    - Good practices:
-      - 'Continuous Integration': 'ides/cicd.md'
-      - 'Python good practices': 'ides/python.md'
-    - IDEs:
-      - 'remote-ssh': 'ides/remote.md'
-      - 'VSCode': 'ides/vscode.md'
+  - IDEs:
+    - 'remote-ssh': 'ides/remote.md'
+    - 'VSCode': 'ides/vscode.md'
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
