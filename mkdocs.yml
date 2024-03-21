@@ -9,20 +9,26 @@ nav:
     - 'Overview': 'ondemand/overview.md'
     - 'Python JupyterNotebook': 'ondemand/jupyter.md'
     - 'RStudio': 'ondemand/RStudio.md'
-  - Workflows:  
+  - Nextflow:
     - NF-CORE:
       - 'nf-core 1: Install and test': 'workflows/nf-core-1.md'
       - 'nf-core 2: Sarek': 'workflows/nf-core-2.md'
     - Other:
-      - 'Singularity and docker': 'workflows/containers.md'    
       - 'Nextflow': 'workflows/nextflow.md'
-  - IDEs:
-    - 'VSCode': 'ides/vscode.md'    
+  - Containers:
+      - 'Singularity and docker': 'workflows/containers.md'
+  - IDEs and standards:
+    - Good practices:
+      - 'Continuous Integration': 'ides/cicd.md'
+      - 'Python good practices': 'ides/python.md'
+    - IDEs:
+      - 'remote-ssh': 'ides/remote.md'
+      - 'VSCode': 'ides/vscode.md'
+    - 
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   - Training:
-    - 'python intro': 'https://almacookbook.github.io/intro-to-python/'  
-    - 'nextflow' : 'training/nextflow.md'
+    - 'python intro': 'https://almacookbook.github.io/intro-to-python/'
 theme:
   name: material  
   logo: assets/icr_svg_logo.svg  
