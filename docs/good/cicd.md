@@ -1,7 +1,7 @@
 # Continuous Integration and Continuous Deployment
 
 ## Introduction
-All languages/tools should have built in to them a form of continuous integration to automate testing and deployment. This is a key part of the software development process and is essential for ensuring that code is of high quality and is deployed quickly and efficiently. It is of particular importance in the scientific community where reproducibility is key.
+Projects should have built in to them a form of continuous integration to automate testing and deployment. This is a key part of the software development process and is essential for ensuring that code is of high quality and is deployed quickly and efficiently. It is of particular importance in the scientific community where reproducibility is key.
 
 ## What is CI/CD?
 Continuous Integration (CI) is the practice of automating the integration of code changes from contributors into a single software project. It includes ensuring that people don;t break each other's changes, and that the key requirements are not broken by changes. This is done by automatically building and testing the code whenever a change is made, and providing feedback to the developers.
