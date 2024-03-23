@@ -2,20 +2,9 @@ site_name: AlmaCookBook
 nav:
   - Home: 'index.md'
   - About: 'about.md'
-  - Good practices:
-    - 'Overview': 'good.md'
-    - Project:
-      - 'Continuous Integration': 'good/cicd.md'
-      - 'Version control': 'good/version.md'    
-      - 'Packaging and deploying': 'good/packaging.md'
-      - 'Using AI' : good/ai.md
-    - Languages:
-      - 'Python good practices': 'good/python.md'
-    - IDEs:
-      - 'VSCode': 'ides/vscode.md'
-      - 'remote-ssh': 'ides/remote.md'      
-    - HPC:
-      - 'Overview': 'good/hpc.md'      
+  - IDEs:
+    - 'VSCode': 'ides/vscode.md'
+    - 'remote-ssh': 'ides/remote.md'          
   - Conda:
     - 'Overview': 'conda/overview.md'
     - 'Basics': 'conda/basics.md'
