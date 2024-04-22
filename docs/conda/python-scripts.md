@@ -21,12 +21,9 @@ If not make sure you have followed the [setup mamba instructions](mamba-first.md
 ```shell
 mamba create --name my-env-name python=3.10
 mamba activate my-env-name
-```
-
-If you want to create the environment locally then
-```shell
-conda create --prefix ./my-env python=3.10
-conda activate ./my-env
+# locally as an alternative
+mamba create --prefix ./my-env-name python=3.10
+mamba activate ./my-env-name
 ```
 
 4. Check you have the environment you expect

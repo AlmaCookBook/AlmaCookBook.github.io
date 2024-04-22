@@ -6,12 +6,15 @@ nav:
     - 'VSCode': 'ides/vscode.md'
     - 'remote-ssh': 'ides/remote.md'          
   - Environments:    
-    - 'Basics': 'conda/basics.md'
-    - 'Mamba/Conda the first time': 'conda/mamba-first.md'
-    - 'python scripts': 'conda/python-scripts.md'
-    - 'python jupyter ondemand': 'conda/python-ondemand.md'
-    - 'R scripts': 'conda/r-scripts.md'
-    - 'RStudio ondemand': 'conda/r-ondemand.md'
+    - '1. Basics': 'conda/basics.md'
+    - '2. Mamba/Conda the first time': 'conda/mamba-first.md'    
+    - Python:      
+      - python scripts: 'conda/python-scripts.md'
+      - python jupyter ondemand: 'conda/python-ondemand.md'
+      - python-venv: 'conda/python-venv.md'
+    - R:
+      - R scripts: 'conda/r-scripts.md'
+      - RStudio ondemand: 'conda/r-ondemand.md'
   - OnDemand:
     - 'Overview': 'ondemand/overview.md'
     - 'Python JupyterNotebook': 'ondemand/jupyter.md'

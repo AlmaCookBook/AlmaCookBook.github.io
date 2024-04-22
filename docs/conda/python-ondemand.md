@@ -18,12 +18,12 @@ mamba --version
 mamba install -c conda-forge ipykernel
 ```
 
-5. Activate the kernem with python
+4. Activate the kernel with python
 ```shell
 python -m ipykernel install --user --name=my-env-name
 ```
 
-6. Start Jupyter OnDemand
+5. Start Jupyter OnDemand
 
 The dropdown for the kernels will now include this environment:
 ![alt text](image.png)
