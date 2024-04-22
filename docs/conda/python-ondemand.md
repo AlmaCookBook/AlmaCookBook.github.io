@@ -8,6 +8,7 @@ You will first need to create the environment on the commandline and activate it
 ```
 ssh username@alma.icr.ac.uk
 srun --pty -t 12:00:00 -p interactive bash
+mamba --version
 ```
 
 2. Follow the steps for creating a new environment in the [mamba documentation](python-scripts.md) and activate it.

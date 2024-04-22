@@ -5,8 +5,7 @@ nav:
   - IDEs:
     - 'VSCode': 'ides/vscode.md'
     - 'remote-ssh': 'ides/remote.md'          
-  - Environments:
-    - 'Overview': 'conda/overview.md'
+  - Environments:    
     - 'Basics': 'conda/basics.md'
     - 'Mamba/Conda the first time': 'conda/mamba-first.md'
     - 'python scripts': 'conda/python-scripts.md'
