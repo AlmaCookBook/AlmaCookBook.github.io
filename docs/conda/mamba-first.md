@@ -1,5 +1,11 @@
 # Using Mamba (conda) for the first time
 
+First get an interactive session:
+```
+ssh username@alma.icr.ac.uk
+srun --pty -t 12:00:00 -p interactive bash
+```
+
 In order to use `conda`, users should add the EasyBuild modules to their user path and load the `Mamba` module:
 
 ```console
