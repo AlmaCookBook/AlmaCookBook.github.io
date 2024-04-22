@@ -1,3 +1,4 @@
 # About and Help
 
-For any questions email schelpdesk@icr.ac.uk.
+Alma and the applications and software that runs on it, is maintained by Scientific Computing, with custom software developement assistance available from the RSE Group.  
+For any help or questions email [scientific computing](mailto:schelpdesk@icr.ac.uk).
