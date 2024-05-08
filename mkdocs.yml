@@ -2,6 +2,7 @@ site_name: AlmaCookBook
 nav:
   - Home: 'index.md'
   - About: 'about.md'
+  - First Steps: 'first_steps.md'
   - IDEs:
     - 'VSCode': 'ides/vscode.md'
     - 'remote-ssh': 'ides/remote.md'          
@@ -20,9 +21,9 @@ nav:
   #  - 'Python JupyterNotebook': 'ondemand/jupyter.md'
   #  - 'RStudio': 'ondemand/RStudio.md'
   - Nextflow:
-    - NF-CORE:
-      - 'nf-core 1: Install and test': 'workflows/nf-core-1.md'
-      - 'nf-core 2: Sarek': 'workflows/nf-core-2.md'
+    - nextflow vs slurm: 'workflows/nextflow.md'
+    - nf-core 1: Install and test: 'workflows/nf-core-1.md'
+    - nf-core 2: Sarek: 'workflows/nf-core-2.md'
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'  
   - FAQs:
