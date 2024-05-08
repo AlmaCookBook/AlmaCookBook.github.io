@@ -15,15 +15,11 @@ nav:
       - python-venv: 'conda/python-venv.md'
     - R:
       - R scripts: 'conda/r-scripts.md'
-      - RStudio ondemand: 'conda/r-ondemand.md'
-  #- OnDemand:
-  #  - 'Overview': 'ondemand/overview.md'
-  #  - 'Python JupyterNotebook': 'ondemand/jupyter.md'
-  #  - 'RStudio': 'ondemand/RStudio.md'
+      - RStudio ondemand: 'conda/r-ondemand.md'  
   - Nextflow:
-    - nextflow vs slurm: 'workflows/nextflow.md'
-    - nf-core 1: Install and test: 'workflows/nf-core-1.md'
-    - nf-core 2: Sarek: 'workflows/nf-core-2.md'
+    - nextflow vs slurm: 'workflows/nextflow.md'  
+    - nf-core 1: Install and test: 'workflows/nf-core-1.md'  
+    - nf-core 2: Sarek: 'workflows/nf-core-2.md'  
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'  
   - FAQs:
