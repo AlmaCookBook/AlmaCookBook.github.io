@@ -18,6 +18,11 @@ You want to have it set up with ssh access from Alma to github.
     - Otherwise [generate a new one](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key).
     - Then [add the ssh key to github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
+3. **The Alma fileshare**  
+You can use file explorer on windows or the mac equivalent to access files in your scratch area of alma from:  
+\\alma-fs\SCRATCH  
+This allows you to move files between your local machine and Alma and do editting of files directly on Alma. If you prefer (or need to access home), there are various browser applications such as WinSCP for the file system.
+
 3. **Conda and Mamba**  
 You should initialise mamba and conda in your shell profile. This will make sure that the conda and mamba commands are available in your shell.  
 Instructions are here: [Conda and Mamba Initialise](conda/mamba-first.md)

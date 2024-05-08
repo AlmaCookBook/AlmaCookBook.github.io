@@ -45,6 +45,11 @@ pip install nf-core
 ```bash
 source ./.venv/bin/activate
 ```
+- Note you could alternatively use a mamba environment for this. The mamba environment loads the java version required for nextflow.  
+```bash
+mamba create --name mamba_nf nextflow
+mamba activate mamba_nf
+```
 
 ## Step 4: Load java and export the singularity cache location
 You will need to do this in every session
