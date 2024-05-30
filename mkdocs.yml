@@ -18,6 +18,7 @@ nav:
       - RStudio ondemand: 'conda/r-ondemand.md'  
   - Nextflow:
     #- nextflow vs slurm: 'workflows/nextflow.md'  
+    - Nextflow version: 'workflows/nextflow-envs.md'
     - nf-core 1 Install and test: 'workflows/nf-core-1.md'  
     - nf-core 2 Sarek: 'workflows/nf-core-2.md'  
   - Containers:
