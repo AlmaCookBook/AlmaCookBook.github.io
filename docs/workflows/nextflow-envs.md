@@ -3,7 +3,7 @@
 The default nextflow on Alma is only version 20 and this is unlikely to be sufficient for recent pipelines.  
 Create an environment for your nextflow pipelines using conda or mamba, or a python virtual environment.  
 
-If you load the mamba environment, you will have the correct java version for nextflow. If you use a pythong virtual environment, you will need to load the correct java version yourself.  
+If you load the mamba environment, you will have the correct java version for nextflow. If you use a python virtual environment, you will need to load the correct java version yourself.  
 
 
 # Using mamba to create a nextflow environment
