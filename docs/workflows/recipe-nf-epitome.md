@@ -2,11 +2,12 @@
 
 This document walks you through running [Oxford Nanopore's](https://community.nanoporetech.com/docs/analyse/epi2me-workflows) test pipeline using Nextflow.  The pipeline can be run directly from [github](https://github.com/epi2me-labs), and in this example we are looking at the [basecalling workflow](https://github.com/epi2me-labs/wf-basecalling).
 
-It is worth noting that this example is using the GPUs on ALma and is therefore following a specific receipe in order for this to woirk on Alma. The solution given here is to use a dual-sbatch pattern to run the nextflow class from a a gpu.
+It is worth noting that this example is using the GPUs on Alma and is therefore following a recipe in order for this to work specifically on Alma. 
+The solution given here is to use a dual-sbatch pattern to run nextflow from a GPU.
 
 In this example mamba and conda are interchangeable, so stick with 1 or the other. I use mamba. If you need any help setting up mamba or conda, or you are not sure if you have it activated on Alma, please see the [mamba installation guide](../conda/mamba-first.md).
 
-All the work below is done from the commandline remaining in your chosen directory on scratch.  
+All the work below is done from the command-line remaining in your chosen directory on scratch.  
 
 ### 1. Work on an interactive node in a suitable directory you have created.
 
