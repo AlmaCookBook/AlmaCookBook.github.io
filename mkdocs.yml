@@ -7,9 +7,9 @@ nav:
     - 'VSCode': 'ides/vscode.md'
     - 'remote-ssh': 'ides/remote.md'          
   - Environments:    
-    - '1. Basics': 'conda/basics.md'
-    - '2. Mamba/Conda the first time': 'conda/mamba-first.md'    
-    - '2. Mamba environments': 'conda/mamba-venvs.md'    
+    - 'Basics': 'conda/basics.md'
+    - 'Mamba/Conda the first time': 'conda/mamba-first.md'    
+    - 'Mamba environments': 'conda/mamba-venvs.md'    
     - Python:      
       - python scripts: 'conda/python-scripts.md'
       - python jupyter ondemand: 'conda/python-ondemand.md'
@@ -20,8 +20,7 @@ nav:
   - Nextflow:
     #- nextflow vs slurm: 'workflows/nextflow.md'  
     - Nextflow version: 'workflows/nextflow-envs.md'
-    - nf-core 1 Install and test: 'workflows/nf-core-1.md'  
-    - nf-core 2 Sarek: 'workflows/nf-core-2.md'  
+    - nf-core Install and test: 'workflows/nf-core-1.md'      
     - Recipes:
       - 'nf-core sarek': 'workflows/nf-core-2.md'
       - 'epi2me-labs': 'workflows/recipe-nf-epitome.md'
