@@ -22,6 +22,9 @@ nav:
     - Nextflow version: 'workflows/nextflow-envs.md'
     - nf-core 1 Install and test: 'workflows/nf-core-1.md'  
     - nf-core 2 Sarek: 'workflows/nf-core-2.md'  
+    - Recipes:
+      - 'nf-core sarek': 'workflows/nf-core-2.md'
+      - 'epi2me-labs': 'workflows/recipe-nf-epitome.md'
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'  
   - FAQs:
