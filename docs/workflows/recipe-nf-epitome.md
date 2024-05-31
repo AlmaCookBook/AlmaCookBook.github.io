@@ -8,7 +8,7 @@ In this example mamba and conda are interchangeable, so stick with 1 or the othe
 
 All the work below is done from the commandline remaining in your chosen directory on scratch.  
 
-1. Work on an interactive node in a suitable directory you have created.
+### 1. Work on an interactive node in a suitable directory you have created.
 
 ```bash
 ssh username@alma.icr.ac.uk
@@ -16,7 +16,7 @@ srun --pty --mem=8GB -c 1 -t 30:00:00 -p interactive bash
 cd /data/scratch/your/path/
 ```
 
-2. Create an activate a mamba environment
+### 2. Create and activate a mamba environment
 
 ```bash
 mamba create --name epi2me-labs -c bioconda -c conda-forge nextflow pytorch cuda
@@ -24,19 +24,19 @@ mamba activate epi2me-labs
 nextflow -v # check that nextflow is installed
 ```
 
-3. Pull the nextflow pipeline from github
+### 3. Pull the nextflow pipeline from github
 
 ```bash
 nextflow pull epi2me-labs/wf-basecalling
 ```
 
-4. Setup the test data
+### 4. Setup the test data
     
 ```bash
 wget https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-basecalling/wf-basecalling-demo.tar.gz
 tar -xzvf wf-basecalling-demo.tar.gz
 ```
-5. Create the first of 2 batch files: epit2me-basecalling.sh
+### 5. Create the first of 2 batch files: epit2me-basecalling.sh
 The first is the sbatch call that start the work off on a gpu.  
 Copy the contents below into a file that you name epi2me-basecalling.sh in this directory.  
 
@@ -56,7 +56,7 @@ module load cuda/11.1
 srun nextflow-basecalling.sh
 ```
 
-6. Create the second of 2 batch files: nextflow-basecalling.sh
+### 6. Create the second of 2 batch files: nextflow-basecalling.sh
 The second is the sbatch call that will run the nextflow class from the gpu.  
 Copy the contents below into a file that you name nextflow-basecalling.sh in this directory.  
 
@@ -81,20 +81,20 @@ nextflow run epi2me-labs/wf-basecalling \
 mamba deactivate
 ```
 
-7. Make sure you have the correct permissions on the files to execute
+### 7. Make sure you have the correct permissions on the files to execute
 
 ```bash
 chmod +x epi2me-basecalling.sh
 chmod +x nextflow-basecalling.sh
 ```
 
-8. Submit the job
+### 8. Submit the job
 
 ```bash
 sbatch epi2me-basecalling.sh
 ```
 
-9. Check the status of the job
+### 9. Check the status of the job
 You can monitor the queues with the following command:
 
 ```bash
@@ -131,10 +131,3 @@ Duration    : 6m 41s
 CPU hours   : 1.0
 Succeeded   : 31
 ```
-
-
-
-
-
-
-
