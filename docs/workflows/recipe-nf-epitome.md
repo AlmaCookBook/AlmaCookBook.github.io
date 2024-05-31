@@ -110,7 +110,7 @@ cat epi2me.err
 cat .nextflow.log
 ```
 
-The .nextflow.log file will give you a good idea of the progress of the job. A successful completion of this test job will look something like this:
+The epi2me.out file will give you a good idea of the progress of the job. A successful completion of this test job will look something like this:
 
 ```bash
 [fc/77f55a] wf_dorado:dorado (3)           | 3 of 3 ✔
