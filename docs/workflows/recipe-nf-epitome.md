@@ -36,29 +36,9 @@ nextflow pull epi2me-labs/wf-basecalling
 wget https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-basecalling/wf-basecalling-demo.tar.gz
 tar -xzvf wf-basecalling-demo.tar.gz
 ```
-### 5. Create the first of 2 batch files: epit2me-basecalling.sh
-The first is the sbatch call that start the work off on a gpu.  
-Copy the contents below into a file that you name epi2me-basecalling.sh in this directory.  
-
-```bash
-#!/usr/bin/env bash
-#SBATCH --job-name=epi2me
-#SBATCH --output=epi2me.out
-#SBATCH --error=epi2me.err
-#SBATCH --partition=gpu
-#SBATCH --ntasks=1
-#SBATCH --time=1:00:00
-#SBATCH --cpus-per-task=12
-#SBATCH --mem-per-cpu=4096
-#SBATCH --gres=gpu:2
-
-module load cuda/11.1
-srun nextflow-basecalling.sh
-```
-
-### 6. Create the second of 2 batch files: nextflow-basecalling.sh
-The second is the sbatch call that will run the nextflow class from the gpu.  
-Copy the contents below into a file that you name nextflow-basecalling.sh in this directory.  
+### 5. Create the first of 2 batch files: the nextflow call
+This script is the sbatch call that will call nextflow from the gpu.  
+Copy the contents below into a file that you name *nextflow-basecalling.sh* in your working directory.  
 
 ```bash
 #!/usr/bin/env bash
@@ -79,6 +59,27 @@ nextflow run epi2me-labs/wf-basecalling \
 --cuda_device cuda:all
 
 mamba deactivate
+```
+
+### 6. Create the second of 2 batch files: the calling script
+
+The first is script that will start the work off on a gpu.  
+Copy the contents below into a file that you name *epi2me-basecalling.sh* in your working directory.  
+
+```bash
+#!/usr/bin/env bash
+#SBATCH --job-name=epi2me
+#SBATCH --output=epi2me.out
+#SBATCH --error=epi2me.err
+#SBATCH --partition=gpu
+#SBATCH --ntasks=1
+#SBATCH --time=1:00:00
+#SBATCH --cpus-per-task=12
+#SBATCH --mem-per-cpu=4096
+#SBATCH --gres=gpu:2
+
+module load cuda/11.1
+srun nextflow-basecalling.sh
 ```
 
 ### 7. Make sure you have the correct permissions on the files to execute
