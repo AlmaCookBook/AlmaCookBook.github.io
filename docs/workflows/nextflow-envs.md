@@ -5,7 +5,13 @@ Create an environment for your nextflow pipelines using conda or mamba, or a pyt
 
 If you load the mamba environment, you will have the correct java version for nextflow. If you use a python virtual environment, you will need to load the correct java version yourself.  
 
+When using mamba or conda (they are interchangeable, be consistent - mamba is preferred), 
+make sure you have first followed the recommended way to ensure they are correctly initisalised on Alma: 
+[mamba installation guide](../conda/mamba-first.md).
 
+The most recent nextflow version in mamba as of May 2024 is `nextflow version 24.04.2.5914`  
+    
+    
 # Using mamba to create a nextflow environment
 
 ```bash
