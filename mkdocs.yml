@@ -16,6 +16,7 @@ nav:
       - python-venv: 'conda/python-venv.md'
     - R:
       - R scripts: 'conda/r-scripts.md'
+      - R installs from github: 'conda/r-github.md'
       - RStudio ondemand: 'conda/r-ondemand.md'  
   - Nextflow:
     #- nextflow vs slurm: 'workflows/nextflow.md'  
