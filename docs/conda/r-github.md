@@ -16,15 +16,20 @@ cd /data/scratch/somewhere/sensible
 ```
 
 2. Create and activate a virtual environment
+```
 mamba create --name mamba-TwoSampleMR -c bioconda r-tidyverse r-remotes r-base=4.3
 mamba activate mamba-TwoSampleMR
+```
 
 3. Manually install some packages in a dependency safe way
+```
 mamba install r-meta
 mamba install r-nloptr
 mamba install r-lme4
+```
 
 4. Install custom package
+```
 R -e 'remotes::install_github("MRCIEU/TwoSampleMR")'
+```
 
----  
