@@ -62,8 +62,7 @@ mamba deactivate
 ```
 
 ### 6. Create the second of 2 batch files: the calling script
-
-The first is script that will start the work off on a gpu.  
+This script will submit the work to a gpu.  
 Copy the contents below into a file that you name *epi2me-basecalling.sh* in your working directory.  
 
 ```bash
