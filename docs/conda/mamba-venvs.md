@@ -28,7 +28,7 @@ mamba deactivate
 
 ## Creating environments
 
-1. In the standard way  
+### 1. In the standard way  
 ```bash
 mamba create --name myenv  
 ```
@@ -45,30 +45,30 @@ To install packages into the environment, eg numpy:
 mamba install numpy
 ```
 
-2. In a specific location  
+### 2. In a specific location  
 
 ```bash
 mamba create --prefix /path/to/env myenv
 ```
 
-3. With a specific version of Python  
+### 3. With a specific version of Python  
 
 ```bash
 mamba create --name my-env python=3.8
 ```
 
-4. With a specific version of a package  
+### 4. With a specific version of a package  
 
 ```bash
 mamba create --name my-env package=1.0
 ```
 
-5.  With a specific version of a package and Python  
+### 5.  With a specific version of a package and Python  
 
 ```bash
 mamba create --name my-env python=3.8 package=1.0
 ```
-6. With a specific version of R
+### 6. With a specific version of R
 
 ```bash
 mamba create --name my-env /path/to/env r-base=4.1
@@ -76,25 +76,25 @@ mamba create --name my-env /path/to/env r-base=4.1
 
 ## Some common environments
 
-1. From the bioconda channel with samtools and bcftools
+### 1. From the bioconda channel with samtools and bcftools
 
 ```bash
 mamba create --name my-env -c bioconda samtools bcftools r-base=4.3
 ```
 
-2. nextflow and nf-core tools
+### 2. nextflow and nf-core tools
 
 ```bash
 mamba create --name my-env -c bioconda nextflow nf-core
 ```
 
-3. R with tidyverse
+### 3. R with tidyverse
 
 ```bash
 mamba create --name my-env -c conda-forge r-tidyverse
 ```
 
-4. Python with pandas and numpy
+### 4. Python with pandas and numpy
 
 ```bash
 mamba create --name my-env -c conda-forge python=3.8 pandas numpy
@@ -120,7 +120,7 @@ This will remove the environment from your system.
 
 ## Trouble shooting  
 
-1.  conda/mamba environment is broken  
+### 1.  conda/mamba environment is broken  
 If you have a broken conda/mamba environment, you can try to fix it by removing the environment and creating it again. You can do this with the commands (conda or mamba):
 ```bash
 conda env remove --name myenv
@@ -141,7 +141,7 @@ and the <<< conda initialize <<< line
 ```
  - Go though the [init process](../first_steps.md) to set up conda and your environment again.
 
-2. There is no space left!
+### 2. There is no space left!
 If you are running out of space in your home directory, you can move the conda environment to SCRATCH. 
 You can do this by creating a simlink to the SCRATCH directory.  
  - Copy your home/.conda directory to SCRATCH somewhere you will remember it is!
