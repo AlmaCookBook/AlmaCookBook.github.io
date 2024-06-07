@@ -5,6 +5,7 @@ Some container tools are installed as sif filws on Alma and some are on dockerhu
 Note - singularity is only installed on the compute/interactive modes. It is not available on the login nodes.  
 
 ### bcl-convert from illumina
+The software is from [illumina](https://emea.support.illumina.com/sequencing/sequencing_software/bcl-convert.html)
 The image is on Alma, located at: /opt/software/containers/singularity/build/bcl.sif  
 
 To use it, you need to bind a path on scratch to the container. It will use that path to write out log files. The general command is (asking for the help):
