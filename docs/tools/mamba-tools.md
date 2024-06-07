@@ -1,11 +1,10 @@
 # Using Scientific Tools with Mamba and Conda
 
 This assumes that you have already followed the [using mamba for the first time](../conda/mamba-first.md) tutorial on this site.  
-Conda environments can be shared amonst users, and for yourself you can share them between different applications, eg all your nextflow pipelines can use the same environment.
 
 Mamba environments manage dependencies and packages for you, and are the preferred way to install R packages.  
 Most R packages can be installed from mamba by prepending "r-" eg "r-tidyverse" etc. 
-Only where the package does not exist is it recommended to use package.install in R.  
+Only where the package does not exist is it recommended to use `package.install` in R.  
 
 *Note* - all of these installations assume you have logged on to an interactive session on Alma.  
 
