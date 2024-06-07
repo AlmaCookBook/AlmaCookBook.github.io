@@ -29,6 +29,7 @@ When evaluating software: work out how best to install it, and if you need guida
 There are an assortment of tools that have been asked about frequently that we have explicit instructions for, and these are listed below.
 
 ## [Mamba and Conda](mamba-tools.md)
+- [ensemble-vep](mamba-tools.md#ensemble-vep)
 - [nextflow latest version](mamba-tools.md#nextflow-latest-version)
 - [MRCIEU/TwoSampleMR](mamba-tools.md#mrcieutwosamplemr)
 
