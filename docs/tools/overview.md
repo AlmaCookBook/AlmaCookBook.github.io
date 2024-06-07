@@ -19,7 +19,7 @@ Software is often distributed via github and if so you can look at the issues an
 
 
 ## How to install software
-There are a variety of ways to install scientific software, including:
+There are a variety of ways to install scientific software, including:  
 - Using conda or mamba (recommended)  
 - Using python virtual environments where the software can be "pip installed"  
 - Using "module load"  
