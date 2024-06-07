@@ -10,6 +10,10 @@ nav:
     - 'Basics': 'conda/basics.md'
     - 'Mamba/Conda the first time': 'conda/mamba-first.md'    
     - 'Mamba environments': 'conda/mamba-venvs.md'    
+    - Scientific tools:
+    - Overview: 'tools/overview.md'
+    - Container tools: 'tools/container-tools.md'
+    - Mamba tools: 'tools/mamba-tools.md'
     - Python:      
       - python scripts: 'conda/python-scripts.md'
       - python jupyter ondemand: 'conda/python-ondemand.md'
