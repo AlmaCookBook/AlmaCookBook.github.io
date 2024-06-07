@@ -20,6 +20,30 @@ nextflow -v
 
 ---  
 
+### ensembl-vep
+This is a package for variant effect prediction [found on github](https://github.com/Ensembl/ensembl-vep).  
+It is most commonly installed from [github with perl](https://www.ensembl.org/info/docs/tools/vep/script/index.html) but can be [installed with conda](https://bioconda.github.io/recipes/ensembl-vep/README.html).  
+
+When installed with conda, the package is called `ensembl-vep`.  The [plugins are aliased](https://www.biostars.org/p/9561573/) as `vep_install`, be;low shows the creation of a conda environment and the [installation of the human cache](https://stackoverflow.com/questions/70801077/how-to-run-ensembl-vep-in-conda).  
+
+```bash
+mamba create --name bio-perl-vep -c conda-forge -c bioconda -c defaults perl-bioperl=1.7.8 ensembl-vep
+mamba activate bio-perl-vep
+vep -help
+vep_install -help
+```
+Example usage:  
+```bash
+vep_install -a cf -s homo_sapiens -y GRCh38 -c ./ —CONVERT
+
+vep --cache --dir_cache "./" \
+   -i "./C1D_filtered_SOPRANO.vcf" \
+   -o "./vep_output.txt" \
+   --offline
+```
+You must have the cache and dir-cache flags specified, and the human data needs to be in the dir-cache. There is no online access on Alma.  
+---  
+
 ### MRCIEU/TwoSampleMR
 This is a package for Mendelian Randomization analysis [found on github](https://github.com/MRCIEU/TwoSampleMR).  
 
