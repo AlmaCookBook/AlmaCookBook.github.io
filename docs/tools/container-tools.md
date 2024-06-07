@@ -4,6 +4,8 @@ Some container tools are installed as sif filws on Alma and some are on dockerhu
 
 Note - singularity is only installed on the compute/interactive modes. It is not available on the login nodes.  
 
+---  
+
 ### bcl-convert from illumina
 The software is from [illumina](https://emea.support.illumina.com/sequencing/sequencing_software/bcl-convert.html)
 The image is on Alma, located at: /opt/software/containers/singularity/build/bcl.sif  
@@ -20,6 +22,7 @@ singularity exec --bind ~:/var/log/bcl-convert /opt/software/containers/singular
 ```
 Note the --bind bit is not optional, the container has hard coded into it the requirement to pass in a path to /var/log/bcl-convert. If you don't do this you will get an error.
 
+---  
 
 ### pisca from the ICR
 The image is on dockerhub, located at: [docker://icrsc/pisca-run](https://hub.docker.com/repository/docker/icrsc/pisca-run/general).  It was created for Heather Grant by the RSE team in Scientific Computing.  
@@ -28,5 +31,5 @@ Pull it first into the directory you want to run it from, and then execute with 
 ```bash
 singularity run -B /your/xml/dir:/mnt docker://icrsc/pisca-run your.xml
 ```
-
+---  
 
