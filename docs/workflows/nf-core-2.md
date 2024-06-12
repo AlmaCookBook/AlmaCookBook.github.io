@@ -1,11 +1,13 @@
 # Running nf-core on Alma - Sarek: a real pipeline
+`Maintained by: Rachel Alcraft. Last updated: 12th June 2024`
 
 This tutorial covers running a a simple version of sarek with data downloaded from zenodo. This forms the basis of nf-core pipelines that you can build up from with your own data. The important aspect is ensuring you have this working on Alma as the configuration for memory and CPUs is quite specific.
 
-> **Note:**  
+> **Note:** 
 > nf-core pipelines are not under our control and may change faster than this documentation. Please do tell us if you have any problems with this tutorial. Please don't assume it is "just you", or the documentation is not supposed to work - we really want it to help everyone and value everyone's input in helping us keep it up-to-date by reporting any problems with it. Send an email to [schelpdesk](mailto:schelpdesk@icr.ac.uk) with the title "Alma Cookbook - Sarek tutorial problem" and it will be filtered to the correct place.
 
-> **Important:**  
+  
+> **Important:** 
 > Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least 10GB and 2 cores to run the workflow interactively.
 
 ## Before you start, log on and activate a mamba session
@@ -29,6 +31,18 @@ nf-core --version
 ## Step 1: Run a real pipeline in test
 You can run any nf-core pipeline in the same way, just replace testpipeline with the name of the pipeline you want to run. You can find the list of pipelines at [nf-core](https://nf-co.re/pipelines).
 For this example we will run the nf-core/sarek pipeline.  We saw a few ways to use an nf-core piepeline in the test, for this we will clone the pipeline.
+
+> **Warning:** 
+> The most likely problem with this step will be pulling the singularity images. These can be large and timeout. If you have a problem with this, you can try to pull the images manually, or ask for help. To manually pull you want to use wget instead of singularity as it is quicker, and you navigate to the singularity cache directory (that you specified above) and wget the image from within there. Instructions  on how you turn a singularity error into a wget call are [here](../faqs/faqs.md#5-my-singularity-image-did-not-pull). It could save time if you pull these common problematic images before you begin:
+```
+# navigate to your singularity cache as above
+cd /data/scratch/YOUR/PATH/GROUP/username/.singularity/cache
+# pull the 2 images I know to be troublesome:
+wget https://depot.galaxyproject.org/singularity/mulled-v2-d9e7bad0f7fbc8f4458d5c3ab7ffaaf0235b59fb:7cc3d06cbf42e28c5e2ebfc7c858654c7340a9d5-0 -O depot.galaxyproject.org-singularity-mulled-v2-d9e7bad0f7fbc8f4458d5c3ab7ffaaf0235b59fb-7cc3d06cbf42e28c5e2ebfc7c858654c7340a9d5-0.img
+
+wget https://depot.galaxyproject.org/singularity/gatk4:4.5.0.0--py36hdfd78af_0 -O depot.galaxyproject.org-singularity-gatk4-4.5.0.0--py36hdfd78af_0.img
+
+```
 
 Starting in the nf-core directory:
 ```bash
