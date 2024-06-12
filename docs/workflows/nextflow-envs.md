@@ -12,7 +12,7 @@ make sure you have first followed the recommended way to ensure they are correct
 The most recent nextflow version in mamba as of May 2024 is `nextflow version 24.04.2.5914`  
     
     
-# Using mamba to create a nextflow environment
+### Using mamba to create a nextflow environment
 
 ```bash
 mamba create --name mamba_nf -c bioconda nextflow
@@ -20,7 +20,7 @@ mamba activate mamba_nf
 nextflow -v
 ```
 
-# Using conda to create a nextflow environment
+### Using conda to create a nextflow environment
 
 ```bash
 conda create --name conda_nf -c bioconda nextflow
@@ -28,7 +28,7 @@ conda activate conda_nf
 nextflow -v
 ```
 
-# Using a python virtual environment to create a nextflow environment
+#### Using a python virtual environment to create a nextflow environment
 
 ```bash
 python3 -m venv venv_nf
