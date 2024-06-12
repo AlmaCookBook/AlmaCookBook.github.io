@@ -2,17 +2,27 @@
 
 This tutorial covers running a a simple version of sarek with data downloaded from zenodo. This forms the basis of nf-core pipelines that you can build up from with your own data. The important aspect is ensuring you have this working on Alma as the configuration for memory and CPUs is quite specific.
 
-## Before you start
-    
+> **Note:**  
+> nf-core pipelines are not under our control and may change faster than this documentation. Please do tell us if you have any problems with this tutorial. Please don't assume it is "just you", or the documentation is not supposed to work - we really want it to help everyone and value everyone's input in helping us keep it up-to-date by reporting any problems with it. Send an email to [schelpdesk](mailto:schelpdesk@icr.ac.uk) with the title "Alma Cookbook - Sarek tutorial problem" and it will be filtered to the correct place.
+
+> **Important:**  
+> Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least 10GB and 2 cores to run the workflow interactively.
+
+## Before you start, log on and activate a mamba session
+Note that mamba is the preferred environment, make sure you have followed this tutorial first: [nextflow with mamba](nextflow-envs.md).
+
 ```bash
 # to alma
 ssh username@alma.icr.ac.uk
 # interactive session with 10GB memory and 2 cores
 srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash    
-cd /data/scratch/YOUR/PATH/GROUP/username/nf-core
-source ./.venv/bin/activate
-module load java/jdk15.0.1
+# navigate to a sensible place
+cd /data/scratch/YOUR/PATH/GROUP/username/somewhere/sensible
+# activate mamba
+mamba activate your-mamba-env
+# export the singularity cache variable to a sesnible place
 export NXF_SINGULARITY_CACHEDIR=/data/scratch/YOUR/PATH/GROUP/username/.singularity/cache
+# check the version of nextflow is as you expect
 nf-core --version
 ```
 
