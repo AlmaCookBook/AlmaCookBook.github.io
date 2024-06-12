@@ -10,7 +10,7 @@ This tutorial covers running a a simple version of sarek with data downloaded fr
 > **Important:** 
 > Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least 10GB and 2 cores to run the workflow interactively.
 
-## Before you start, log on and activate a mamba session
+## Step 1: Log on and activate a mamba session
 Note that mamba is the preferred environment, make sure you have followed this tutorial first: [nextflow with mamba](nextflow-envs.md).
 
 ```bash
@@ -28,10 +28,16 @@ export NXF_SINGULARITY_CACHEDIR=/data/scratch/YOUR/PATH/GROUP/username/.singular
 nf-core --version
 ```
 
-## Step 1: Run a real pipeline in test
+## Step 2: Run a real pipeline in test
 You can run any nf-core pipeline in the same way, just replace testpipeline with the name of the pipeline you want to run. You can find the list of pipelines at [nf-core](https://nf-co.re/pipelines).
 For this example we will run the nf-core/sarek pipeline.  We saw a few ways to use an nf-core piepeline in the test, for this we will clone the pipeline.
 
+Starting in the nf-core directory:
+```bash
+git clone git@github.com:nf-core/sarek.git
+cd sarek
+nextflow run main.nf -profile test,singularity --outdir my-outdir
+```
 > **Warning:** 
 > The most likely problem with this step will be pulling the singularity images. These can be large and timeout. If you have a problem with this, you can try to pull the images manually, or ask for help. To manually pull you want to use wget instead of singularity as it is quicker, and you navigate to the singularity cache directory (that you specified above) and wget the image from within there. Instructions  on how you turn a singularity error into a wget call are [here](../faqs/faqs.md#5-my-singularity-image-did-not-pull). It could save time if you pull these common problematic images before you begin:
 ```
@@ -44,14 +50,7 @@ wget https://depot.galaxyproject.org/singularity/gatk4:4.5.0.0--py36hdfd78af_0 -
 
 ```
 
-Starting in the nf-core directory:
-```bash
-git clone git@github.com:nf-core/sarek.git
-cd sarek
-nextflow run main.nf -profile test,singularity --outdir my-outdir
-```
-
-## Step 2: Run a real pipeline with data
+## Step 3: Run a real pipeline with data
 [Sarek pipeline](https://nf-co.re/sarek/3.3.2/docs/usage)
 
 We first need to generate some test data (if you don't have some).
@@ -80,7 +79,7 @@ Within the sarek directory run the pipeline with the following command, specifyi
 nextflow run main.nf --input inputs/samplesheet.csv -profile singularity --outdir my-outdir --genome GATK.GRCh38 --max_cpus 2
 ```
 
-## Step 3: Running sarek on slurm
+## Step 4: Running sarek on slurm
 The reason we are using an HPC cluster is to distribute this work across the cluster's compute nodes. To do this we can specify that we want to use slurm. We also need to pass in some alma specific memory parameters. To do this, create a file in the sarek/conf directory called icr.config, and put inside it this contents:
 ```
 singularity {
@@ -128,7 +127,7 @@ JobID           JobName  Partition    Account  AllocCPUS      State ExitCode
 13777644.ba+      batch              infotech         12  COMPLETED      0:0 
 ```
 
-## Step 4: Running sarek on slurm from the master-worker partition
+## Step 5: Running sarek on slurm from the master-worker partition
 Nextflow has a master thread that is controlling all the other processes. Alma has a special queue for this called the master-worker queue, where long running threads can control their child processs (the compute node has a time limit to stop long running jobs).
 
 To use this queue, kick off the job above using "sbatch" and send it to this master-worker queue.
