@@ -1,8 +1,8 @@
 # Running Matlab code from Python on Alma
 
-Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is not available in the default conda channels, so you will need to install it from the MathWorks channel.
+Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is installed from python's pip into a mamba environment.
 
-Older versions of matlab required an installation from within a matlab installation directory on Alma, but newer versions do not require this. We need to control the version to be compaptible with Alma - pythons 3.9, 3.10 and 3.11 are compatible with R2023b for example and compatible with maatlabengine==23.2.1
+We need to control the version to be compaptible with Alma - pythons 3.9, 3.10 and 3.11 are compatible with the latest Alma installtion of matlab R2023b, and compatible with maatlabengine==23.2.1
 
 ## Log onto an interactive sessiopn on Alma
 ```shell
