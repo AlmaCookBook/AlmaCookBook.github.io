@@ -33,6 +33,7 @@ nav:
       - 'Singularity and docker': 'workflows/containers.md'  
   - Recipes:
     - 'Matlab-From-Python': 'recipes/matlab-python.md'
+    - 'TensorFlow-On-GPU': 'recipes/tensorflow-gpu.md'
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   #- Training:
