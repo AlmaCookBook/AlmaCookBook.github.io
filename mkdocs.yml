@@ -31,6 +31,8 @@ nav:
       - 'epi2me-labs': 'workflows/recipe-nf-epitome.md'
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'  
+  - Recipes:
+    - 'Matlab-From-Python': 'recipes/matlab-python.md'
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   #- Training:

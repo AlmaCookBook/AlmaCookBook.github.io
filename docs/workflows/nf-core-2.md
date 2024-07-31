@@ -8,7 +8,7 @@ This tutorial covers running a a simple version of sarek with data downloaded fr
 
   
 > **Important:** 
-> Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least 10GB and 2 cores to run the workflow interactively.
+> Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least *30 GB* and *2 cores* to run the workflow interactively.
 
 ## Step 1: Log on and activate a mamba session
 Note that mamba is the preferred environment, make sure you have followed this tutorial first: [nextflow with mamba](nextflow-envs.md).
@@ -17,7 +17,7 @@ Note that mamba is the preferred environment, make sure you have followed this t
 # to alma
 ssh username@alma.icr.ac.uk
 # interactive session with 10GB memory and 2 cores
-srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash    
+srun --pty --mem=30GB -c 2 -t 30:00:00 -p interactive bash    
 # navigate to a sensible place
 cd /data/scratch/YOUR/PATH/GROUP/username/somewhere/sensible
 # activate mamba
@@ -36,17 +36,21 @@ Starting in the nf-core directory:
 ```bash
 git clone git@github.com:nf-core/sarek.git
 cd sarek
-nextflow run main.nf -profile test,singularity --outdir my-outdir
+nextflow run main.nf -profile test,singularity -resume --outdir my-outdir
 ```
 > **Warning:** 
 > The most likely problem with this step will be pulling the singularity images. These can be large and timeout. If you have a problem with this, you can try to pull the images manually, or ask for help. To manually pull you want to use wget instead of singularity as it is quicker, and you navigate to the singularity cache directory (that you specified above) and wget the image from within there. Instructions  on how you turn a singularity error into a wget call are [here](../faqs/faqs.md#5-my-singularity-image-did-not-pull). It could save time if you pull these common problematic images before you begin:
 ```
 # navigate to your singularity cache as above
 cd /data/scratch/YOUR/PATH/GROUP/username/.singularity/cache
-# pull the 2 images I know to be troublesome:
+# pull the few images I know to be troublesome:
+
 wget https://depot.galaxyproject.org/singularity/mulled-v2-d9e7bad0f7fbc8f4458d5c3ab7ffaaf0235b59fb:7cc3d06cbf42e28c5e2ebfc7c858654c7340a9d5-0 -O depot.galaxyproject.org-singularity-mulled-v2-d9e7bad0f7fbc8f4458d5c3ab7ffaaf0235b59fb-7cc3d06cbf42e28c5e2ebfc7c858654c7340a9d5-0.img
 
 wget https://depot.galaxyproject.org/singularity/gatk4:4.5.0.0--py36hdfd78af_0 -O depot.galaxyproject.org-singularity-gatk4-4.5.0.0--py36hdfd78af_0.img
+
+wget https://depot.galaxyproject.org/singularity/multiqc:1.21--pyhdfd78af_0 -O depot.galaxyproject.org-singularity-multiqc-1.21--pyhdfd78af_0.img
+
 
 ```
 
@@ -76,7 +80,7 @@ patient1,test_sample,lane_1,inputs/T4A_R.fastq.gz,inputs/T4A_F.fastq.gz
 
 Within the sarek directory run the pipeline with the following command, specifying the max_cpus as the ones we have requested an interactive session with (2)
 ```bash
-nextflow run main.nf --input inputs/samplesheet.csv -profile singularity --outdir my-outdir --genome GATK.GRCh38 --max_cpus 2
+nextflow run main.nf --input inputs/samplesheet.csv -profile singularity -resume --outdir my-outdir --genome GATK.GRCh38 --max_cpus 2
 ```
 
 ## Step 4: Running sarek on slurm
@@ -108,7 +112,7 @@ The final section for the execution is important. It tells nextflow to use the m
 You can now run the pipeline using the slurm cluster with this command:
 
 ```bash
-nextflow run main.nf --input inputs/samplesheet.csv -profile singularity --outdir my-outdir --genome GATK.GRCh38 -c conf/icr.config
+nextflow run main.nf --input inputs/samplesheet.csv -profile singularity -resume --outdir my-outdir --genome GATK.GRCh38 -c conf/icr.config
 ```
 
 You will notice that this takes over your session. If you want to monitor the queues you can open another ssh session to alma - you don't need to go an interactive session, you can stay on the login node, and simply type
@@ -133,7 +137,7 @@ Nextflow has a master thread that is controlling all the other processes. Alma h
 To use this queue, kick off the job above using "sbatch" and send it to this master-worker queue.
 
 a) Create a file in the sarek directory called ```sarek-master.sh``` and fill it with this contents:
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=nf-username
 #SBATCH --output=slurm_out.txt
@@ -142,7 +146,7 @@ a) Create a file in the sarek directory called ```sarek-master.sh``` and fill it
 #SBATCH --time=1:00:00
 #SBATCH --mem-per-cpu=4000
 
-srun nextflow run main.nf --input inputs/samplesheet.csv -profile singularity --outdir my-outdir --genome GATK.GRCh38 -c conf/icr.config
+srun nextflow run main.nf --input inputs/samplesheet.csv -profile singularity -resume --outdir my-outdir --genome GATK.GRCh38 -c conf/icr.config
 ```
 Start this job with
 ```
