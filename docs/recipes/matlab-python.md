@@ -24,7 +24,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/software/applications/MATLAB/R2023b
 ## Install the matlab engine
 ```shell
 python -m pip install --upgrade pip
-python -m pip install .
 python -m pip install matlabengine==23.2.1
 ```
 
