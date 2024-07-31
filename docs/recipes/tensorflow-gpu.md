@@ -13,6 +13,7 @@ srun --pty --mem=10GB -c 1 -t 30:00:00 -p interactive bash
 
 ## Create a mamba environment to work in for compatible versions:
 We have cuda 11.1 installed so we need:  
+
 [Versions compatibility link](https://www.tensorflow.org/install/source#gpu)  
 | Version | Python | version | Compiler | Build tools | cuDNN | CUDA |  
 | ------- | ------ | ------- | -------- | ----------- | ----- | ---- |  
