@@ -62,9 +62,10 @@ Further resources for the installation and use of the matlab engine can be found
 
 ## Resources
 ### Installation
-https://pypi.org/project/matlabengine/23.2.1/
-https://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html
+- [https://pypi.org/project/matlabengine/23.2.1/](https://pypi.org/project/matlabengine/23.2.1/)  
+- [https://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html](https://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)  
+
 ### Use
-https://uk.mathworks.com/help/matlab/matlab_external/get-started-with-matlab-engine-for-python.html
-https://uk.mathworks.com/help/matlab/matlab_external/start-the-matlab-engine-for-python.html
-https://uk.mathworks.com/help/matlab/matlab_external/use-the-matlab-engine-workspace-in-python.html
+- [https://uk.mathworks.com/help/matlab/matlab_external/get-started-with-matlab-engine-for-python.html](https://uk.mathworks.com/help/matlab/matlab_external/get-started-with-matlab-engine-for-python.html)
+- [https://uk.mathworks.com/help/matlab/matlab_external/start-the-matlab-engine-for-python.html](https://uk.mathworks.com/help/matlab/matlab_external/start-the-matlab-engine-for-python.html)
+- [https://uk.mathworks.com/help/matlab/matlab_external/use-the-matlab-engine-workspace-in-python.html](https://uk.mathworks.com/help/matlab/matlab_external/use-the-matlab-engine-workspace-in-python.html)
