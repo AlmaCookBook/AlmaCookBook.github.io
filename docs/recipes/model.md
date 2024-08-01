@@ -1,6 +1,9 @@
+This code is taken and adapted from the website 
+[benchmarking-cpu-and-gpu-performance-with-tensorflow](https://www.analyticsvidhya.com/blog/2021/11/benchmarking-cpu-and-gpu-performance-with-tensorflow)  
+
 ```python
 """
-This code is taken from the website 
+This code is taken and adapted from the website 
 https://www.analyticsvidhya.com/blog/2021/11/benchmarking-cpu-and-gpu-performance-with-tensorflow/
 """
 import datetime

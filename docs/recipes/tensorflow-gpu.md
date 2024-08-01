@@ -5,14 +5,16 @@ TensorFlow is a popular machine learning library that can be used to train and r
 
 Getting the versions to match is tricky, this recipe works on 11th July 2024 when CUDA 11.1 on Alma at /opt/software/compilers/cuda/11.1 is the most recent CUDA version.  The versions of TensorFlow and CUDA are changing rapidly so you may need to adjust the versions to get them to work together.
 
-## Log onto an interactive session on Alma
+## Create the mamba environment
+
+### Get setup on Alma
 
 ```shell
 ssh username@alma.icr.ac.uk
 srun --pty --mem=10GB -c 1 -t 30:00:00 -p interactive bash
 ```
 
-## Create a mamba environment to work in for compatible versions:
+### Create a mamba environment to work in for compatible versions:
 We have cuda 11.1 installed so we need:  
 [Versions compatibility link](https://www.tensorflow.org/install/source#gpu)  
 
@@ -27,7 +29,7 @@ mamba install conda-forge::tensorflow
 mamba install conda-forge::tensorflow-gpu
 ```
 
-## Check you have the versions of python and TensorFlow you think you have
+### Check you have the versions of python and TensorFlow you think you have
 ```shell
 which python
 python --version
@@ -35,7 +37,7 @@ python -m pip show tensorflow
 python -c "import sys; print('\n'.join(sys.path))"
 ```
 
-## Navigate somewhere sensible
+### Navigate somewhere sensible
 ```shell
 mkdir /path/to/your/code
 cd /path/to/your/code
@@ -100,12 +102,12 @@ Create another file `/path/to/your/code/python_train.py` with the following cont
 
 We are using the test training code for CPU vs GPU from this site: [Benchmarking CPU And GPU Performance With Tensorflow](https://www.analyticsvidhya.com/blog/2021/11/benchmarking-cpu-and-gpu-performance-with-tensorflow/)
 
-## First add some more modules to the mamba environment:
+### First add some more modules to the mamba environment:
 ```shell
 mamba install conda-forge::matplotlib
 ```
 
-## Create a python file
+### Create a python file
 Create a file `model.py` with the following content in [this file](model.md)  
 
 Test the file works from the interactive node:
@@ -113,7 +115,7 @@ Test the file works from the interactive node:
 python model.py
 ```
 
-## Create 2 new sbatch files
+### Create 2 new sbatch files
 Create a file `sbatch_train_cpu.sh` and `sbatch_train_cpu.sh` with the following content:  
 `sbatch_train_cpu.sh`  
 ```shell
@@ -136,7 +138,7 @@ python ./model.py cpu
 #SBATCH --gres=gpu:1
 python ./model.py gpu
 ```
-## Run them both
+### Run them both
 ```shell
 chmod +x sbatch_train_cpu.sh
 chmod +x sbatch_train_gpu.sh
