@@ -106,7 +106,7 @@ mamba install conda-forge::matplotlib
 ```
 
 ## Create a python file
-Create a file `model.py` with the following content in [this file](model.py)  
+Create a file `model.py` with the following content in [this file](model.md)  
 
 Test the file works from the interactive node:
 ```shell
