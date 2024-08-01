@@ -1,4 +1,5 @@
 # Running Matlab code from Python on Alma
+`Maintained by: Rachel Alcraft. Last updated: 31st July 2024`
 
 Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is installed from python's pip into a mamba environment.
 
