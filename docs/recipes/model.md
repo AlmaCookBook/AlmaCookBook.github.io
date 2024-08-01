@@ -1,3 +1,4 @@
+```python
 """
 This code is taken from the website 
 https://www.analyticsvidhya.com/blog/2021/11/benchmarking-cpu-and-gpu-performance-with-tensorflow/
@@ -78,3 +79,4 @@ else:
 endtime = datetime.datetime.now()
 diff = endtime - starttime
 print('Job took: ', diff.days, diff.seconds, diff.microseconds)
+```
