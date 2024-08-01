@@ -9,30 +9,31 @@ If you want to use an earlier pyhton version, you will need to install an earlie
 For compatibility with python 3.8 (eg ig=f you are using a cuda gpu) you will need to install matlabengine==9.14.7
 
 
-## Log onto an interactive sessiopn on Alma
+## Get setup on Alma
+### Log onto an interactive sessiopn on Alma
 ```shell
 ssh username@alma.icr.ac.uk
 srun --pty --mem=10GB -c 1 -t 30:00:00 -p interactive bash
 ```
 
-## Create a mamba environment to work in
+### Create a mamba environment to work in
 ```shell
 mamba create -n my-matlab python=3.11
 mamba activate my-matlab
 ```
 
-## add the library path
+### add the library path
 ```shell
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/software/applications/MATLAB/R2023b/bin/glnxa64
 ```
 
-## Install the matlab engine
+### Install the matlab engine
 ```shell
 python -m pip install --upgrade pip
 python -m pip install matlabengine==23.2.1
 ```
 
-## Check you have the versions of python and matlab you think you have
+### Check you have the versions of python and matlab you think you have
 ```shell
 which python
 python --version
