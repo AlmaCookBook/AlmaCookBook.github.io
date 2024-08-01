@@ -15,7 +15,12 @@ Please browse the menu for recipes and patterns and tested ideas for software de
 
 ---
 
-Note this site is currently under construction and is updated with content as it is delivered. 
+Note this site is always under active construction and is updated with content as it is delivered. 
+
+---  
+
+Maintained by the **Research Software Engineering team** in Scientific Computing at the ICR.  
+Contact *Service Hub and* ask for the RSE team if you have any questions or suggestions.  
 
 ---  
 

@@ -1,4 +1,5 @@
 # Run TensorFlow python code on an Alma GPU
+`Maintained by: Rachel Alcraft. Last updated: 1st August 2024`
 
 TensorFlow is a popular machine learning library that can be used to train and run deep learning models. TensorFlow can be run on a GPU to speed up training and inference. This guide will show you how to run TensorFlow code on an Alma GPU.
 
@@ -60,7 +61,7 @@ for x in local_device_protos:
 print('Num GPUs Available: ', num_gpus)
 ```
 
-## Create a batch script to run the python script
+### Create a batch script to run the python script
 Create a file `/path/to/your/code/sbatch_script.sh` with the following content:
 ```shell
 #!/bin/sh
@@ -73,19 +74,19 @@ Create a file `/path/to/your/code/sbatch_script.sh` with the following content:
 python ./python_script.py
 ```
 
-## Submit the batch script to the queue
+### Submit the batch script to the queue
 You can submit the batch job to slurmn and it will be run on a GPU node.
 ```shell
 chmod +x sbatch_script.sh
 sbatch sbatch_script.sh
 ```
 
-## Monitor the job
+### Monitor the job
 Check the job is running and on a gpu node:
 ```shell
 squeue -u $USER
 ```
-## Check the output
+### Check the output
 The output from the print statements in python are diverted to the file `tf_tst.out` and any errors are diverted to `tf_tst.err`. You can check the output with the following command:
 ```shell
 cat tf_tst.out
@@ -99,9 +100,64 @@ Create another file `/path/to/your/code/python_train.py` with the following cont
 
 We are using the test training code for CPU vs GPU from this site: [Benchmarking CPU And GPU Performance With Tensorflow](https://www.analyticsvidhya.com/blog/2021/11/benchmarking-cpu-and-gpu-performance-with-tensorflow/)
 
-```python
-TODO
+## First add some more modules to the mamba environment:
+```shell
+mamba install conda-forge::matplotlib
 ```
+
+## Create a python file
+Create a file `model.py` with the following content in [this file](model.py)  
+
+Test the file works from the interactive node:
+```shell
+python model.py
+```
+
+## Create 2 new sbatch files
+Create a file `sbatch_train_cpu.sh` and `sbatch_train_cpu.sh` with the following content:  
+`sbatch_train_cpu.sh`  
+```shell
+#!/bin/sh
+#SBATCH -J "cpu_train"
+#SBATCH -p compute
+#SBATCH -e cpu_train.err
+#SBATCH -o cpu_train.out
+#SBATCH -t 12:00:00
+python ./model.py cpu
+```
+`sbatch_train_gpu.sh`  
+```shell
+#!/bin/sh
+#SBATCH -J "gpu_train"
+#SBATCH -p gpu
+#SBATCH -e gpu_train.err
+#SBATCH -o gpu_train.out
+#SBATCH -t 12:00:00
+#SBATCH --gres=gpu:1
+python ./model.py gpu
+```
+## Run them both
+```shell
+chmod +x sbatch_train_cpu.sh
+chmod +x sbatch_train_gpu.sh
+sbatch sbatch_train_cpu.sh
+sbatch sbatch_train_gpu.sh
+```
+### Monitor the jobs
+Check the job is running and on a gpu node:
+```shell
+squeue -u $USER
+```
+### Check the output
+The output from the print statements in python are diverted to the file `tf_tst.out` and any errors are diverted to `tf_tst.err`. You can check the output with the following command:
+```shell
+cat cpu_train.out
+cat cpu_train.err
+cat gpu_train.out
+cat gpu_train.err
+```
+When I run it the GPU is 10x faster: 232 seconds for the CPU and 26 seconds for the GPU.
+
 
 
 
