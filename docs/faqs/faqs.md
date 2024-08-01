@@ -61,9 +61,9 @@ conda create --name myenv
 
 However sometimes the environments are so badly broken you cannot use an conda commands at all and get unhandled or unknown excpetions. 
 In these rare circumstances you can totally refresh your installation by:
-1. Renaming the .conda directory in your home directory
-2. Renaming the .condarc file in your home directory
-3. Remving the conda init section in your .bashrc file which means deleting this entire section
+1. Renaming the .conda directory in your home directory  
+2. Renaming the .condarc file in your home directory  
+3. Remving the conda init section in your .bashrc file which means deleting this entire section  
 ```bash
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -71,5 +71,5 @@ Delete all this stuff too, as well as the >>> conda initialize >>> line
 and the <<< conda initialize <<< line
 # <<< conda initialize <<<
 ```
-4. Go though the [init process](../first_steps.md) to set up conda and your environment again.
+4. Go though the [init process](../first_steps.md) to set up conda and your environment again.  
 
