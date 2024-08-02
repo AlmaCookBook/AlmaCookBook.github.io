@@ -7,6 +7,9 @@ nav:
     - Overview: 'tools/overview.md'
     - Container tools: 'tools/container-tools.md'
     - Mamba tools: 'tools/mamba-tools.md'
+  - Version Control:
+    - 'Git': 'vcs/gitlab.md'
+    - 'GitHub': 'vcs/github.md'
   - IDEs:
     - 'VSCode': 'ides/vscode.md'
     - 'remote-ssh': 'ides/remote.md'            
