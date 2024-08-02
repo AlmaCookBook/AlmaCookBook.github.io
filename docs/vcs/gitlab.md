@@ -40,8 +40,9 @@ The key's randomart image is:
 ### Step 2: Paste the public part on GitLab
 You now need to copy the public key and paste it into GitLab.  
 - Open the file `~/.ssh/id_rsa.pub` with a text editor and copy the contents (or cat ~/.ssh/id_rsa.pub).  
-- Go to the GitLab website and navigate to your profile settings.  
-- In the left hand menu, click on `SSH Keys` and paste the key into the box.  
+- Go to the GitLab website and navigate to your profile settings on the left.  
+- In the left hand menu, click on `SSH Keys`  
+- Choose "Add new key" and paste the key into the box.  
 - Click `Add Key` and you are done!.  
 
 ![GitLab img](gitlab.png "GitLab")
