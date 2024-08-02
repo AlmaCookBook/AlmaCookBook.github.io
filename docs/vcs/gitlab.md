@@ -44,7 +44,8 @@ You now need to copy the public key and paste it into GitLab.
 - In the left hand menu, click on `SSH Keys` and paste the key into the box.  
 - Click `Add Key` and you are done!.  
 
-<img style="float: right;" src="gitlab.png">
+![GitLab img](gitlab.png "GitLab")
+
 
 
 
