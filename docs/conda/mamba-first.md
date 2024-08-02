@@ -101,3 +101,22 @@ conda 23.1.0
 You should now be ready to use conda.
 
 ***
+
+## 4. Adding pre-loaded path for ALma
+Alma has some preloaded environments that you can use if you are looking to just use a single tool (you can't add to the environments). You can add these to your path by running:
+
+```console
+conda config --append envs_dirs /opt/software/applications/anaconda/3/envs/
+```
+
+You can then see that you have these environments by running:
+
+```console
+conda info --envs
+```
+
+And activate them by running, for example:
+
+```console
+conda activate star2.7.6a
+```
