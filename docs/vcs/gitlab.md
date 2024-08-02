@@ -11,7 +11,7 @@ You may want access to the gitlab server from your local machine, or from Alma. 
 cd ~/.ssh
 cat id_rsa.pub
 # if it already exists you can skip the generation and go to Step 2
-ssh-keygen -t rsa -C "user.name@icr.ac.uk"
+ssh-keygen -t rsa -C "edit-your-user-name@icr.ac.uk"
 # To the questions that follow, just press enter to leave the responses blank
 Enter file in which to save the key (/home/demo/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -44,7 +44,7 @@ You now need to copy the public key and paste it into GitLab.
 - In the left hand menu, click on `SSH Keys` and paste the key into the box.  
 - Click `Add Key` and you are done!.  
 
-<img style="float: right;" src="../assets/gitlab.png">
+<img style="float: right;" src="gitlab.png">
 
 
 
