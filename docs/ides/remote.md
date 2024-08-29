@@ -19,7 +19,7 @@ An adaptation for Alma follows:
 ### Connect to a remote host: login node
 - In vscode you need to check that you can ssh onto alma in a vscode terminal.
 - in vscode select "Connect to host" after clicking on the "remote window" icon in the far left bottom of the tool bar
-- enter "ssh username@alma.icr.ac.uk"
+- enter `ssh username@alma.icr.ac.uk`
 - Select the directory with your ssh key
 
 This will now create the connection. In the future you will be able to select this from the list when you choose a remote connection.
@@ -28,13 +28,13 @@ Alma has a 200MB memory limit for the login nodes, so you will need to use the i
 
 **OR:**
 ### Connect to a remote host: compute node
-- You will need to firsy log in to an interactive node on Alma with a terminal using:
+- You will need to first log in to an interactive node on Alma with a terminal using:
 ```bash
-ssh <username>@alma.icr.ac.uk
+ssh username@alma.icr.ac.uk
 srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash
 ```
 - in vscode select "Connect to host" after clicking on the "remote window" icon in the far left bottom of the tool bar
-- enter "ssh -J <username>@alma.icr.ac.uk node01"
+- enter `ssh -J username@alma.icr.ac.uk node01`
 - Select the directory with your ssh key
 
 This will now create the connection. In the future you will be able to select this from the list when you choose a remote connection, but you will still need to first access a log in node frrom a terminal.
