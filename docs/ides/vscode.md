@@ -33,25 +33,11 @@ VSCode has a large number of settings that can be configured to customise the ed
 You can also configure settings for specific languages and tools by creating a `settings.json` file in the `.vscode` directory in your project.
 
 ## Remote Development
-VSCode has a number of extensions that allow you to develop code remotely on a different machine or in a container. This is useful if you are working on a machine with limited resources, or if you need to develop code in a different environment to your local machine.
+VSCode has a number of extensions that allow you to develop code remotely on a different machine or in a container. This is useful if you are working on a machine with limited resources, or if you need to develop code in a different environment to your local machine.  
 
-The Remote-SSH extension allows you to connect to a remote machine over SSH and develop code on that machine. The Remote-Containers extension allows you to develop code in a container, and the Remote - WSL extension allows you to develop code in the Windows Subsystem for Linux.
+The Remote-SSH extension allows you to connect to a remote machine over SSH and develop code on that machine. The Remote-Containers extension allows you to develop code in a container, and the Remote - WSL extension allows you to develop code in the Windows Subsystem for Linux.  
 
-To connect remotely to Alma you can use the login node if you are just editting scripts, or you can connect remotely a compute node if you need to run code.  
-
-To connect to the **login node** you can use the Remote-SSH extension and connect to `alma.icr.ac.uk` with your ICR username and password.  
-
-To connect to a compute node, first with a command promt, log in to an interactive node on Alma using:  
-```
-ssh <username>@alma.icr.ac.uk
-srun --pty --mem=10GB -c 2 -t 30:00:00 -p interactive bash
-```
-Now you can use the Remote-SSH extension and use a jump path:
-```
-ssh -J <username>@alma.icr.ac.uk node01
-```
-
-
+To use vscode for remote-ssh development follow the [remote-ssh instructions](remote.md).  
 
 ## Debugging
 VSCode has built-in support for debugging code written in a number of languages. You can configure debugging settings in the `.vscode/launch.json` file in your project, and then start a debugging session by clicking on the Debug icon in the Activity Bar on the side of the window.
