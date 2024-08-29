@@ -50,6 +50,8 @@ Now you can use the Remote-SSH extension and use a jump path:
 ```
 ssh -J <username>@alma.icr.ac.uk node01
 ```
+![alt text](image.png)
+
 
 ## Debugging
 VSCode has built-in support for debugging code written in a number of languages. You can configure debugging settings in the `.vscode/launch.json` file in your project, and then start a debugging session by clicking on the Debug icon in the Activity Bar on the side of the window.
