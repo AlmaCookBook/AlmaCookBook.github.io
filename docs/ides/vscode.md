@@ -50,7 +50,7 @@ Now you can use the Remote-SSH extension and use a jump path:
 ```
 ssh -J <username>@alma.icr.ac.uk node01
 ```
-![alt text](image.png)
+
 
 
 ## Debugging
