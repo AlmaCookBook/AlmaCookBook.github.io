@@ -15,7 +15,7 @@ The most recent nextflow version in mamba as of May 2024 is `nextflow version 24
 ### Using mamba to create a nextflow environment
 
 ```bash
-mamba create --name mamba_nf -c bioconda nextflow
+mamba create --name mamba_nf -c bioconda nextflow=24.04.4-0
 mamba activate mamba_nf
 nextflow -v
 ```
