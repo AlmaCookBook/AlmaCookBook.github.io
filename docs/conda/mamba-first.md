@@ -82,7 +82,11 @@ Added mamba to /home/<username>/.bashrc
 ```
 
 It is important that we pay attention to the last part of this output: **Close your Alma terminal and open it up again.**
+You can litteraly close and open your Alma terminal, or alternatively run:
 
+```console
+$source ~/.bashrc
+```
 ## 3. Using conda post-initialization
 
 After you have started a fresh terminal session, **you do not need to follow the previous steps again**. Check that you can run
