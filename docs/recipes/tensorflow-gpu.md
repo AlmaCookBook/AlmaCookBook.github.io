@@ -29,7 +29,7 @@ mamba install conda-forge::tensorflow
 mamba install conda-forge::tensorflow-gpu
 ```
 
-### Check you have the versions of python and TensorFlow you think you have
+### Check that the required versions of python and TensorFlow were correctly installed
 ```shell
 which python
 python --version

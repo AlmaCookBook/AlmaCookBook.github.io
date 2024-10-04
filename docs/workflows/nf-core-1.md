@@ -84,12 +84,16 @@ cd testpipeline_run
 nextflow run main.nf -profile test,singularity --outdir my-outdir
 ```
 
-- 3. Using nf-core's download module
-With this option, you download the entire workflow so it can be run offline. With the other options there is downloading as and when so eventually everythong will be downloaded - eg the singularity modules are downloaded on first use and the reused from the singulaity cach. With download, the entire thing is downlaoded into the given directory. This may not be desired. There can be problems with this functionality so go back to a previous mode if so.
+- 3. Using nf-core download module
+[//]: <> (I'm not sure I understand the idea below)
+With this option, you download the entire workflow so it can be run offline. With the other options there is downloading as and when so eventually everything will be downloaded - e.g., the singularity modules are downloaded on first use and then reused from the singularity cache. With download, the entire thing is downloaded into the given directory. This may not be desired. There can be problems with this functionality so go back to a previous mode if so.
 
 For this you type in ```nf-core download``` and then follow the prompts:
 ![alt text](../assets/nf-core-download.png)
 
 
 ## Step 7: Check the output
-You will see that both of these created a work directory in the directory they were running from, and the output directory specified in the command. These will contain the output of the pipeline. The work directory is important for trouble shooting as any errrors will be in the logs there including all the data and parameters used in the commands that failed.
+The pipeline outputs are written in two newly created directories:
+- an output directory as specified in the command argument --outdir.
+- a work directory in the directory they were running from. The work directory is important for troubleshooting as any error will be in the logs there including all the data and parameters used in the commands that failed.
+

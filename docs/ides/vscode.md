@@ -3,13 +3,13 @@
 VSCode is a free open-source code editor developed by Microsoft. It has a built-in Git integration, debugging support, syntax highlighting, code completion, and more. 
 It is available for Windows, macOS, and Linux.
 
-VSCode is becomming the most popular code editor for software development and data science. It has a large number of extensions available for a wide range of languages and tools.
+VSCode is becoming the most popular code editor for software development and data science. It has a large number of extensions available for a wide range of languages and tools.
 
 ## Installation
 To install VSCode, go to the [VSCode website](https://code.visualstudio.com/) and download the installer for your operating system.
 
 ## VSCode Tutorials
-- [Getting started with VSCode](https://code.visualstudio.com/docs/python/python-tutorial). This introduction to VSCode covers the basics of using the editor, using packages, using virtual environments buy wiriting a simple "roll the dice" application.
+- [Getting started with VSCode](https://code.visualstudio.com/docs/python/python-tutorial). This introduction to VSCode covers the basics of using the editor, using packages, using virtual environments by wiriting a simple "roll the dice" application.
 - [VSCode and python learning path modules](https://learn.microsoft.com/en-us/training/browse/?products=vs-code&terms=python). This is a collection of modules that cover the basics of using VSCode with python.
 - [Introduction to computer science with VSCode and python](https://vscodeedu.com/courses/intro-to-python). This 19 hour course is a fully comprehensice introduction to computer science using VSCode and python./ It covers the basics of programming, data structures, algorithms, along with debugging, testing, and version control.
 

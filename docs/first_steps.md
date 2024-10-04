@@ -43,12 +43,13 @@ but [jupyter notebooks can be used with a conda environment](conda/python-ondema
 5. **Nextflow**  
 Alma has a shared installation of Nextflow, but you can also access nextflow through python virtual environments or conda environments.
 Instructions are here: [Nextflow](workflows/nextflow-envs.md)  
+Nextflow is used to build analysis pipelines among others. A community effort was put to collect existing set of analysis pipelines and to save in 'nf-core' pipelines.
 nf-core pipelines are also available on Alma, the complexity is in the way the pipelines are run on the slurm executor.
 Instructions are here for [getting started](workflows/nf-core-1.md) and [running an nf-core pipeline](workflows/nf-core-2.md).
 
 6. **Docker and singularity**  
 An alternative to conda environments is creating a docker image and running it on Alma through singularity. 
-Additionally, many bioinformatics tools come available as docker images that can be run on Alma though singularity.
+Additionally, many bioinformatics tools come available as docker images that can be run on Alma through singularity.
 Instructions are here: [Docker and Singularity](workflows/containers.md)
 
 ---  
