@@ -2,7 +2,7 @@
 
 We have recently made it possible to connect to Alma from vscode - though only to the login nodes.
 
-Instructions are fairly brief covering all the compnents involved - any more information needed about any compnent contact the helpdesk.
+Instructions are fairly brief covering all the components involved - any more information needed about any compnent contact the helpdesk.
 
 The full details are given by microsoft here: [remote-ssh with vscode](https://code.visualstudio.com/docs/remote/ssh#:~:text=Connect%20to%20a%20remote%20host&text=In%20VS%20Code%2C%20select%20Remote,hostname%20as%20in%20step%201.)  
 

@@ -13,7 +13,7 @@ We can *activate* and *deactivate* different environments to use with different 
 It is best practice, when we create a new environment, to define the version of our programming language we want 
 to use. This is much easier to setup now than change later. 
 
-To create a new environment, we should run the command
+To create a new environment, run the command
 
 - **Python**
     
@@ -27,7 +27,7 @@ To create a new environment, we should run the command
   mamba create --name <env name> r-base=<version>
   ```
 
-This will create a new environment that has an associatied name that you have provided, here represented by `<env name>`, and a
+This will create a new environment that has an associated name that you have provided, here represented by `<env name>`, and a
 corresponding version, here represented by `<version>`. As a concrete example, we can create an environment called "tmp_python"
 using Python 3.11:
 
@@ -39,7 +39,7 @@ When prompted
 ```
 Confirm changes: [Y/n]
 ```
-press enter. 
+write Y and press enter. 
 
 The process will probably take a minute or longer to complete.
 

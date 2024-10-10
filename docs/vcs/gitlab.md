@@ -45,7 +45,7 @@ You now need to copy the public key and paste it into GitLab.
 - Choose "Add new key" and paste the key into the box.  
 - Click `Add Key` and you are done!.  
 
-![GitLab img](gitlab.png "GitLab")
+![GitLab img](../assets/gitlab.png "GitLab")
 
 
 

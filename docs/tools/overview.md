@@ -6,6 +6,7 @@ There are a variety of ways these tools can be installed and used and this can b
 
 ## Should I use the software?
 When evaluating scientific software pay attention to the quality of the software before you use it.  Some things to consider are:
+
 - When was it last updated  
 - How many people are using it  
 - Are there any known issues  

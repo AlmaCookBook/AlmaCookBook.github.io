@@ -30,7 +30,7 @@ nf-core --version
 
 ## Step 2: Run a real pipeline in test
 You can run any nf-core pipeline in the same way, just replace testpipeline with the name of the pipeline you want to run. You can find the list of pipelines at [nf-core](https://nf-co.re/pipelines).
-For this example we will run the nf-core/sarek pipeline.  We saw a few ways to use an nf-core piepeline in the test, for this we will clone the pipeline.
+For this example we will run the nf-core/sarek pipeline.  We saw a few ways to use an nf-core pipeline in the test, for this we will clone the pipeline.
 
 Starting in the nf-core directory:
 ```bash

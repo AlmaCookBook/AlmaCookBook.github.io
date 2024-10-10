@@ -1,4 +1,4 @@
-# Run TensorFlow python code on an Alma GPU
+# Running TensorFlow python code on an Alma GPU
 `Maintained by: Rachel Alcraft. Last updated: 1st August 2024`
 
 TensorFlow is a popular machine learning library that can be used to train and run deep learning models. TensorFlow can be run on a GPU to speed up training and inference. This guide will show you how to run TensorFlow code on an Alma GPU.
@@ -29,7 +29,7 @@ mamba install conda-forge::tensorflow
 mamba install conda-forge::tensorflow-gpu
 ```
 
-### Check you have the versions of python and TensorFlow you think you have
+### Check that the required versions of python and TensorFlow were correctly installed
 ```shell
 which python
 python --version
