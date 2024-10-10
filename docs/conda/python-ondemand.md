@@ -26,6 +26,6 @@ python -m ipykernel install --user --name=my-env-name
 5. Start Jupyter OnDemand
 
 The dropdown for the kernels will now include this environment:
-![alt text](image.png)
+![alt text](../assets/image.png)
 
 

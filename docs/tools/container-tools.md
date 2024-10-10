@@ -1,6 +1,5 @@
 # Using Scientific Tools with Singularity
-[//]: <> (Rachel: there is a typo below, but not sure how to fix it?)
-Some container tools are installed as sif filws on Alma and some are on dockerhub, where they can be used either locally with docker, or on Alma via singularity. These examples have been built at the ICR in order to simplify the usage of the complex environments that are required for these tools.
+Some container tools are installed as .sif files on Alma and some are on dockerhub, where they can be used either locally with docker, or on Alma via singularity. These examples have been built at the ICR in order to simplify the usage of the complex environments that are required for them.
 
 Note - singularity is only installed on the compute/interactive modes. It is not available on the login nodes.  
 
