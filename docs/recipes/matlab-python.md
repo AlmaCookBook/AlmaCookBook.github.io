@@ -1,11 +1,11 @@
 # Running Matlab code from Python on Alma
 `Maintained by: Rachel Alcraft. Last updated: 31st July 2024`
 
-Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is installed from python's pip into a mamba environment.
+Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is installed using pip system into a mamba environment.
 
 We need to control the version to be compaptible with Alma - pythons 3.9, 3.10 and 3.11 are compatible with the latest Alma installtion of matlab R2023b, and compatible with matlabengine==23.2.1
 
-If you want to use an earlier pyhton version, you will need to install an earlier version of the matlab engine.
+If you want to use an earlier python version, you will need to install an earlier version of the matlab engine.
 For compatibility with python 3.8 (eg ig=f you are using a cuda gpu) you will need to install matlabengine==9.14.7
 
 
@@ -33,7 +33,7 @@ python -m pip install --upgrade pip
 python -m pip install matlabengine==23.2.1
 ```
 
-### Check you have the versions of python and matlab you think you have
+### Check that the required python and matlab versions were correctly installed
 ```shell
 which python
 python --version
@@ -46,7 +46,7 @@ python -c "import sys; print('\n'.join(sys.path))"
 python
 ```
 
-### Run the following paste it in line by line
+### Run the following: paste it in line by line
 ```python
 print("Starting MatLab Test")
 import matlab.engine
