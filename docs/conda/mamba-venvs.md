@@ -7,7 +7,7 @@ srun --pty -t 12:00:00 -p interactive bash
 ```
 
 This assumes that you have already followed the [using mamba for the first time](mamba-first.md) tutorial on this site.  
-Conda environments can be shared amonst users, and for yourself you can share them between different applications, eg all your nextflow pipelines can use the same environment.
+Conda environments can be shared amongst users, and for yourself you can share them between different applications, e.g., all your nextflow pipelines can use the same environment.
 
 Mamba environments manage dependencies and packages for you, and are the preferred way to install R packages. 
 Most R packages can be installed from mamba wiby prepending "r-" eg "r-tidyverse" etc. 
@@ -74,27 +74,36 @@ mamba create --name my-env python=3.8 package=1.0
 mamba create --name my-env /path/to/env r-base=4.1
 ```
 
-## Some common environments
+## Some common environments using channels
 
-### 1. From the bioconda channel with samtools and bcftools
+Mamba uses channels to search for packages. A package could be present in multiple channels. 
+A channel is specified using the -c argument.
+A channel is an independent and isolated repo structure that is used to classify and administrate more easily a package server. It comes with a repodata.json file that is the index of all available packages.
+
+Examples of existing channels:
+1. bioconda
+2. conda-forge
+3. defaults 
+
+### 1. From the bioconda channel: samtools and bcftools packages
 
 ```bash
 mamba create --name my-env -c bioconda samtools bcftools r-base=4.3
 ```
 
-### 2. nextflow and nf-core tools
+### 2. From the bioconda channel: nextflow and nf-core tools
 
 ```bash
 mamba create --name my-env -c bioconda nextflow nf-core
 ```
 
-### 3. R with tidyverse
+### 3. From the conda-forge channel: R with tidyverse
 
 ```bash
 mamba create --name my-env -c conda-forge r-tidyverse
 ```
 
-### 4. Python with pandas and numpy
+### 4. From the conda-forge channel: Python with pandas and numpy
 
 ```bash
 mamba create --name my-env -c conda-forge python=3.8 pandas numpy

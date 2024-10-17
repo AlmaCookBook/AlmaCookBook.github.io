@@ -24,12 +24,11 @@ You want to have it set up with ssh access from Alma to github.
 3. **The Alma fileshare**  
 Samba servers exist for mounting easily a remote system on your Machine, for both SCRATCH and RDS.
 This allows you to move files between your local machine and Alma and to edit files directly on Alma. If you prefer (or need to access home), there are various browser applications such as WinSCP for the file system.
-
 You can use file explorer on windows or Finder on iOS to access files in your scratch or RDS area of alma from:  
 - [SCRATCH fs server](smb://alma-fs)
 - [RDS fs server](smb://rds.icr.ac.uk/DATA)
 
-Note for MAC users: Command+K and enter the Samba server address or simply open the address in your browser.
+For MAC users: Press Command+K and enter the Samba server address or simply open the address in your browser to mount the remote system.
 
 3. **Conda and Mamba**  
 You should initialise mamba and conda in your shell profile. This will make sure that the conda and mamba commands are available in your shell.  
