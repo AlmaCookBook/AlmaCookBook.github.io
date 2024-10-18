@@ -25,7 +25,7 @@ You want to have it set up with ssh access from Alma to github.
 Samba servers exist for mounting easily a remote system on your Machine, for both SCRATCH and RDS.
 This allows you to move files between your local machine and Alma and to edit files directly on Alma. If you prefer (or need to access home), there are various browser applications such as WinSCP for the file system.
 
-> Note for MAC users: Command+K and enter the Samba server address or simply open the address in your browser.  
+> Note for MAC users: Press Command+K and enter the Samba server address or simply open the address in your browser to mount the remote system.  
 
 - **IOS**  
 You can use file explorer on windows or Finder on iOS to access files in your scratch or RDS area of alma from:  
@@ -63,3 +63,26 @@ Instructions are here: [Docker and Singularity](workflows/containers.md)
 For any help or questions email [scientific computing](mailto:schelpdesk@icr.ac.uk).
 
 ---  
+
+8. **Connection to Alma and using Slurm**
+Alma clusters are hosted on : alma.icr.ac.uk.
+
+You can access your /home/ repository via ssh, as follows:
+```bash
+ssh alma.icr.ac.uk
+```
+Alma is using Slurm queue system for running jobs through scheduling. 
+Users submit jobs, which are scheduled and allocated resources (CPU time, memory, etc.) by the resource manager.
+
+Multiple partitions exist on Alma clusters: interactive, compute, gpu, data-transfer, short, among others.
+Compute queue is the default one. Depending on the task to accomplish one partition could be more adapted than the others. For instance, use data-transfer partition to move files, use gpu partition to run GPU adapted software/code and use interactive or short partition for ephemeral tasks.
+
+It is important to note that any computation should not be made directly on the cluster head, but rather on a node.
+Below is an example of how to run an interactive session on a remote node, for 2h with 10GB max memory and 2 cores.
+```bash
+srun --pty --mem=10GB -c2 -t 02:00:00 -p interactive bash
+```
+A good practice is to set accurately the allocated resources (CPU time, memory and core numbers) and not to over-estimate them to get a chance to run fast your job.
+
+
+For more info,  an extensive internal documentation is present on [Nexus](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/New-Users-Guide.aspx)
