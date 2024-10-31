@@ -1,6 +1,6 @@
 # Running nf-core on Alma - Setup and check
 
-This tutorial covers running a simple test nf-core workflow on alma to santiy check access and modules are installed correctly and working and run a test. In part 2 [run sarek](nf-core-2.md).
+This tutorial covers running a simple test nf-core workflow on Alma to sanity check access and modules are installed correctly and working and run a test. In part 2 [run sarek](nf-core-2.md).
 
 ## Step 1: Log on to an interactive node on Alma
     
@@ -66,17 +66,17 @@ nf-core --version
 ```
 
 ## Step 6: Run the nf-core test workflow
-The nf-core workflows can be run in 3 ways, either directly from github, or they can be downloaded first.
-Although it is recommended to run them directly from github unless you are developing them, it can cause github access problems in an HPC environment, so I will describe them, with a preference for the github clone.
+The nf-core workflows can be run in 3 ways, either directly from GitHub, or they can be downloaded first.
+Although it is recommended to run them directly from GitHub unless you are developing them, it can cause GitHub access problems in an HPC environment, so I will describe them, with a preference for the GitHub clone.
 
-- 1. Running from github
+- 1. Running from GitHub
 ```bash
 mkdir testpipeline_run #the _run to distinguish it from when we manually pull
 cd testpipeline_run
 nextflow run nf-core/testpipeline -profile test,singularity --outdir my-outdir
 ```
 
-- 2. Cloning from github and running
+- 2. Cloning from GitHub and running
 start back in the nfcore directory (```cd /data/scratch/YOUR/PATH/GROUP/username/nf-core``` or ```cd ..```)
 ```bash
 git clone git@github.com:nf-core/testpipeline.git

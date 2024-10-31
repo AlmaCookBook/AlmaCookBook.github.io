@@ -61,7 +61,7 @@ mamba install <package name>
 
 where `<package name>` is the name of the package we want to install, for example, `numpy`.
 
-Note to R users: All R package names should be preceeded by `r-`. For example, `dplyr` should be `r-dplyr`. 
+Note to R users: All R package names should be preceded by `r-`. For example, `dplyr` should be `r-dplyr`. 
 
 If you require a specific package version, you can instead use the syntax `<package name>=<version>`, for example, `numpy=1.23.5`.
 

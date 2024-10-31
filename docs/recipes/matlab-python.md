@@ -3,14 +3,14 @@
 
 Running MatLab code from python requires the installation of an additional package called `matlab.engine`. This package is installed using pip system into a mamba environment.
 
-We need to control the version to be compaptible with Alma - pythons 3.9, 3.10 and 3.11 are compatible with the latest Alma installtion of matlab R2023b, and compatible with matlabengine==23.2.1
+We need to control the version to be compatible with Alma - pythons 3.9, 3.10 and 3.11 are compatible with the latest Alma installation of MatLab R2023b, and compatible with matlabengine==23.2.1
 
-If you want to use an earlier python version, you will need to install an earlier version of the matlab engine.
+If you want to use an earlier python version, you will need to install an earlier version of the MatLab engine.
 For compatibility with python 3.8 (eg ig=f you are using a cuda gpu) you will need to install matlabengine==9.14.7
 
 
 ## Get setup on Alma
-### Log onto an interactive sessiopn on Alma
+### Log onto an interactive session on Alma
 ```shell
 ssh username@alma.icr.ac.uk
 srun --pty --mem=10GB -c 1 -t 30:00:00 -p interactive bash
@@ -27,20 +27,20 @@ mamba activate my-matlab
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/software/applications/MATLAB/R2023b/bin/glnxa64
 ```
 
-### Install the matlab engine
+### Install the MatLab engine
 ```shell
 python -m pip install --upgrade pip
 python -m pip install matlabengine==23.2.1
 ```
 
-### Check that the required python and matlab versions were correctly installed
+### Check that the required python and MatLab versions were correctly installed
 ```shell
 which python
 python --version
 python -m pip show matlabengine
 python -c "import sys; print('\n'.join(sys.path))"
 ```
-## Start the matlab engine and test it
+## Start the MatLab engine and test it
 ### Open the python shell
 ```shell
 python
@@ -57,8 +57,8 @@ a = eng.eval('sqrt(y)')
 print("If a == 2.0 then it works!")
 print("a =",a)
 ```
-You can now create scripts that use matlab and run on alma when using this mamba environment.
-Further resources for the installation and use of the matlab engine can be found below.
+You can now create scripts that use MatLab and run on Alma when using this mamba environment.
+Further resources for the installation and use of the MatLab engine can be found below.
 
 ## Resources
 ### Installation

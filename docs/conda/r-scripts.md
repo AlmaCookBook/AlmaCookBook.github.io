@@ -1,6 +1,6 @@
 # Using R Scripts on Alma - Environments
 
-Creating an environment with your installations will enable you to use R on Alma in a reproduceable manner. The environment can be shared with colleagues, help desk, and collaborators to ensure that the same environment is used for the same results. It also means that in the future you can recreate the environment to run the same notebooks.
+Creating an environment with your installations will enable you to use R on Alma in a reproducible manner. The environment can be shared with colleagues, help desk, and collaborators to ensure that the same environment is used for the same results. It also means that in the future you can recreate the environment to run the same notebooks.
 
 **If you haven't already, follow the [setup mamba instructions](mamba-first.md) to get mamba working.**
 
@@ -30,7 +30,7 @@ module load CMake
 ```
 
 4. Installing packages
-It is preferable to use mamba to install R packages like ggplot2 etc. In general, if there is a packagae that you could install with install(packages), you can install it with mamba install with an "r-" in the front - not always but it is the best way to try.
+It is preferable to use mamba to install R packages like ggplot2 etc. In general, if there is a package that you could install with install(packages), you can install it with mamba install with an "r-" in the front - not always, but it is the best way to try.
 ```
 mamba install r-ggplot2
 ```

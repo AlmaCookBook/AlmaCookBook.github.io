@@ -2,7 +2,7 @@
 
 There is a vast array of scientific software written by researchers and developers around the world. 
 This software is often written in a variety of languages, including C, C++, Fortran, perl, R and Python. 
-There are a variety of ways these tools can be installed and used and this can be frustrating and time consuming. Here we have instructions for the use of some common tools and some general advice on how to install and use scientific software.
+There are a variety of ways these tools can be installed and used and this can be frustrating and time-consuming. Here we have instructions for the use of some common tools and some general advice on how to install and use scientific software.
 
 ## Should I use the software?
 When evaluating scientific software pay attention to the quality of the software before you use it.  Some things to consider are:
@@ -16,7 +16,7 @@ When evaluating scientific software pay attention to the quality of the software
 
 If the software is not well maintained, has no documentation, or has no community of users, you may want to consider using a different tool.
 
-Software is often distributed via github and if so you can look at the issues and dates on the files, paper references and get a feel for it. It may be software from a major lab or company and so you can be more confident in its use.
+Software is often distributed via GitHub and if so you can look at the issues and dates on the files, paper references and get a feel for it. It may be software from a major lab or company and so you can be more confident in its use.
 
 
 ## How to install software

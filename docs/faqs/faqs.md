@@ -45,9 +45,9 @@ echo $SINGULARITY_CACHEDIR
 echo $NXF_SINGULARITY_CACHEDIR
 ```
 
-Where APPTAINER_CACHEDIR is the new place singularity goes, and SINGULARITY_CACHEDIR is the old place, and NXF_SINGULARITY_CACHEDIR is the place nextflow looks for singularity images.
+Where APPTAINER_CACHEDIR is the new place singularity goes, and SINGULARITY_CACHEDIR is the old place, and NXF_SINGULARITY_CACHEDIR is the place Nextflow looks for singularity images.
 
-To change them do (for which ever one you want to change):
+To change them do (for whichever one you want to change):
 ```bash
 export APPTAINER_CACHEDIR=/data/scratch/your/path/username/.singularity/cache
 ```
@@ -59,7 +59,7 @@ conda env remove --name myenv
 conda create --name myenv
 ```
 
-However sometimes the environments are so badly broken you cannot use any conda commands at all and get unhandled or unknown excpetions. 
+However sometimes the environments are so badly broken you cannot use any conda commands at all and get unhandled or unknown exceptions. 
 In these rare circumstances you can totally refresh your installation by:  
 1. Renaming the .conda directory in your home directory  
 2. Renaming the .condarc file in your home directory  
@@ -71,5 +71,5 @@ Delete all this stuff too, as well as the >>> conda initialize >>> line
 and the <<< conda initialize <<< line
 # <<< conda initialize <<<
 ```
-4. Go though the [init process](../first_steps.md) to set up conda and your environment again.  
+4. Go through the [init process](../first_steps.md) to set up conda and your environment again.  
 

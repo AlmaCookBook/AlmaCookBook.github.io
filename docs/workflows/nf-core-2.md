@@ -1,7 +1,7 @@
 # Running nf-core on Alma - Sarek: a real pipeline
 `Maintained by: Rachel Alcraft. Last updated: 12th June 2024`
 
-This tutorial covers running a a simple version of sarek with data downloaded from zenodo. This forms the basis of nf-core pipelines that you can build up from with your own data. The important aspect is ensuring you have this working on Alma as the configuration for memory and CPUs is quite specific.
+This tutorial covers running a simple version of sarek with data downloaded from zenodo. This forms the basis of nf-core pipelines that you can build up from with your own data. The important aspect is ensuring you have this working on Alma as the configuration for memory and CPUs is quite specific.
 
 > **Note:** 
 > nf-core pipelines are not under our control and may change faster than this documentation. Please do tell us if you have any problems with this tutorial. Please don't assume it is "just you", or the documentation is not supposed to work - we really want it to help everyone and value everyone's input in helping us keep it up-to-date by reporting any problems with it. Send an email to [schelpdesk](mailto:schelpdesk@icr.ac.uk) with the title "Alma Cookbook - Sarek tutorial problem" and it will be filtered to the correct place.
@@ -11,7 +11,7 @@ This tutorial covers running a a simple version of sarek with data downloaded fr
 > Everything in this tutorial is intentional in order to work on Alma so take care with each step ☺️ Note that you need to have an interactive session with at least *30 GB* and *2 cores* to run the workflow interactively.
 
 ## Step 1: Log on and activate a mamba session
-Note that mamba is the preferred environment, make sure you have followed this tutorial first: [nextflow with mamba](nextflow-envs.md).
+Note that mamba is the preferred environment, make sure you have followed this tutorial first: [Nextflow with mamba](nextflow-envs.md).
 
 ```bash
 # to alma
@@ -106,7 +106,7 @@ executor {
 }
 ```
 
-The final section for the execution is important. It tells nextflow to use the memory allocation per CPU that we have requested. This is important as the memory allocation is different on the cluster to the local machine. Notes about this [are here](https://www.nextflow.io/docs/latest/config.html#scope-executor).
+The final section for the execution is important. It tells Nextflow to use the memory allocation per CPU that we have requested. This is important as the memory allocation is different on the cluster to the local machine. Notes about this [are here](https://www.nextflow.io/docs/latest/config.html#scope-executor).
 
 
 You can now run the pipeline using the slurm cluster with this command:
@@ -115,7 +115,7 @@ You can now run the pipeline using the slurm cluster with this command:
 nextflow run main.nf --input inputs/samplesheet.csv -profile singularity -resume --outdir my-outdir --genome GATK.GRCh38 -c conf/icr.config
 ```
 
-You will notice that this takes over your session. If you want to monitor the queues you can open another ssh session to alma - you don't need to go an interactive session, you can stay on the login node, and simply type
+You will notice that this takes over your session. If you want to monitor the queues you can open another ssh session to Alma - you don't need to go an interactive session, you can stay on the login node, and simply type
 ```
 sacct
 ```
@@ -132,7 +132,7 @@ JobID           JobName  Partition    Account  AllocCPUS      State ExitCode
 ```
 
 ## Step 5: Running sarek on slurm from the master-worker partition
-Nextflow has a master thread that is controlling all the other processes. Alma has a special queue for this called the master-worker queue, where long running threads can control their child processs (the compute node has a time limit to stop long running jobs).
+Nextflow has a master thread that is controlling all the other processes. Alma has a special queue for this called the master-worker queue, where long-running threads can control their child processes (the compute node has a time limit to stop long-running jobs).
 
 To use this queue, kick off the job above using "sbatch" and send it to this master-worker queue.
 

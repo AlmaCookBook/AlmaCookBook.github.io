@@ -37,10 +37,10 @@ This will be located in the conda home directory set up in your path.  To find t
 conda config --show envs_dirs
 ```
 You will see any shared (read only) environments you have access too along with your own personal environments.  
-**Note** because the default is your home directory which is does not have much space, you may want to move the default to SCRATCH.  
+**Note:** because the default is your home directory which is does not have much space, you may want to move the default to SCRATCH.  
 
 Once activated anything you install will be installed in the active environment, including any python pip installs. 
-To install packages into the environment, eg numpy:
+To install packages into the environment, e.g. numpy:
 ```bash
 mamba install numpy
 ```
@@ -127,7 +127,7 @@ mamba env remove --name my-env
 ```
 This will remove the environment from your system.  
 
-## Trouble shooting  
+## Troubleshooting  
 
 ### 1.  conda/mamba environment is broken  
 If you have a broken conda/mamba environment, you can try to fix it by removing the environment and creating it again. You can do this with the commands (conda or mamba):
@@ -136,11 +136,11 @@ conda env remove --name myenv
 conda create --name myenv
 ```
 
-However sometimes the environments are so badly broken you cannot use an conda commands at all and get unhandled or unknown excpetions. 
+However sometimes the environments are so badly broken you cannot use any conda commands at all and get unhandled or unknown exceptions. 
 In these rare circumstances you can totally refresh your installation by:
  - Renaming the .conda directory in your home directory
  - Renaming the .condarc file in your home directory
- - Remving the conda init section in your .bashrc file which means deleting this entire section
+ - Removing the conda init section in your .bashrc file which means deleting this entire section
 ```bash
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -148,7 +148,7 @@ Delete all this stuff too, as well as the >>> conda initialize >>> line
 and the <<< conda initialize <<< line
 # <<< conda initialize <<<
 ```
- - Go though the [init process](../first_steps.md) to set up conda and your environment again.
+ - Go through the [init process](../first_steps.md) to set up conda and your environment again.
 
 ### 2. There is no space left!
 If you are running out of space in your home directory, you can move the conda environment to SCRATCH. 

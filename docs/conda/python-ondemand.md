@@ -1,8 +1,8 @@
 # Using Jupyter OnDemand on Alma - Environments
 
-Creating an environment with your installations will enable you to use Jupyter notebooks on Alma in a reproduceable manner. The environment can be shared with colleagues, help desk, and collaborators to ensure that the same environment is used for the same results. It also means that in the future you can recreate the environment to run the same notebooks.
+Creating an environment with your installations will enable you to use Jupyter notebooks on Alma in a reproducible manner. The environment can be shared with colleagues, help desk, and collaborators to ensure that the same environment is used for the same results. It also means that in the future you can recreate the environment to run the same notebooks.
 
-You will first need to create the environment on the commandline and activate it as a kernel for Jupyter.
+You will first need to create the environment on the command line and activate it as a kernel for Jupyter.
 
 1. First get an interactive session:
 ```
