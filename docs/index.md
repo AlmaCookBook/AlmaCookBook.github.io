@@ -7,11 +7,11 @@
 
 ---  
 
-These recipes are primarily targetted at computing with Alma, the ICR's HPC system, but also cover other software and tools that are commonly used in scientific computing.
+These recipes are primarily targeted at computing with Alma, the ICR's HPC system, but also cover other software and tools that are commonly used in scientific computing.
 
 
 
-Please browse the menu for recipes and patterns and tested ideas for software development and scientific computing on Alma. Currently there are recipes for nextflow, GPU programming, matlab from python and conda and mamba environments for python and R.  
+Please browse the menu for recipes and patterns and tested ideas for software development and scientific computing on Alma. Currently, there are recipes for Nextflow, GPU programming, MatLab from python and conda and mamba environments for python and R.  
 
 ---
 

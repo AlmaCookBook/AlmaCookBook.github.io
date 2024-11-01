@@ -1,38 +1,38 @@
 # Nextflow vs slurm
 
-This article compares a nextflow workflow with a slurm workflow using a very simple so-called embarrassingly parallel workflow as an example.
+This article compares a Nextflow workflow with a slurm workflow using a very simple so-called embarrassingly parallel workflow as an example.
 
 ### This article covers:  
-- how to convert an existing slurm workflow to nextflow
-- a simple introduction to nextflow
-- a simple help to get nextflow working on alma
+- how to convert an existing slurm workflow to Nextflow
+- a simple introduction to Nextflow
+- a simple help to get Nextflow working on alma
 - a simple introduction to running a slurm job on alma
 
-At the end of this you will have a simple dependent array job in slurm running on alma, alongside a nextflow workflow that gives the same answer. Both workflows will call the same python scripts that are doing the real work.
+At the end of this you will have a simple dependent array job in slurm running on alma, alongside a Nextflow workflow that gives the same answer. Both workflows will call the same python scripts that are doing the real work.
 
-### Why use nextflow?
-There are pros and cons to any method, and there are other workflow methods being used at the ICR. Some of the advantages of nextflow are:
+### Why use Nextflow?
+There are pros and cons to any method, and there are other workflow methods being used at the ICR. Some of the advantages of Nextflow are:
 
 - adoption by the bioinformatics community to produce a catalogue of open-source, maintained pipelines at nf-core 
 - you can create re-usable modules
 - it is platform independent, you can run on slurm or locally with very little change
 - checkpointing is built in, so if something fails it can pick up where it left off
 - the dependencies are sophisticated so you can build whatever you need
-- there is seemless integration with docker and singularity
+- there is seamless integration with docker and singularity
 
 ### What does this workflow do?
 The workflow is based on input-output of files and directories, consistent with the way many bioinformatics applications work.  This example will do the following:
 
 - Using a python script, create files for the numbers 1:n - creating a file for each
-- Once this is complete, seperate processes take each of these files and square them, unecessarily using numpy and sleeping for a user defined time to demo
+- Once this is complete, separate processes take each of these files and square them, unnecessarily using numpy and sleeping for a user defined time to demo
 - Once that is complete, all the results are added up and published to a results directory
 - Links will be given for further information at various steps to keep the document simple.
 
 ### Tutorial
-1. Ensure you have access to alma
-If you are a new user to alma you will need to [request access](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/Getting-Started.aspx#anchor3).
+1. Ensure you have access to Alma
+If you are a new user to Alma you will need to [request access](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/Getting-Started.aspx#anchor3).
 
-See above also for a reminder of how to access alma, or some [documents on slurm here](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/userguides/Pages/Use-Cases.aspx).
+See above also for a reminder of how to access Alma, or some [documents on slurm here](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/userguides/Pages/Use-Cases.aspx).
 
 2. Check you anaconda environment
 You want to be running an updated anaconda environment which will ensure a recent python. If you have not already done this, then follow [these instructions here](../conda/mamba-first.md). 
@@ -43,23 +43,23 @@ Python 3.8.3
 ```
 
 3. Log on to an interactive/compute node
-Once at the alma login prompt, access a compute node:
+Once at the Alma login prompt, access a compute node:
 
 ```
 $ ssh username@alma.icr.ac.uk
 $ srun --pty -t 12:00:00 -p interactive bash
 ```
-The interactive nodes are required for running nextflow as singularity is not installed on the login nodes. You do not need to load singularity, it is loaded by default. In this example we will not be using singularity, look at the nf-core training page  for more details.
+The interactive nodes are required for running Nextflow as singularity is not installed on the login nodes. You do not need to load singularity, it is loaded by default. In this example we will not be using singularity, look at the nf-core training page for more details.
 
 4. Navigate to a good location
-Navigate to a good location where you will pull a github repo. Create a directory that you might pull in a few repos for further training. Example shown for the scratch data in Scientific Computing.
+Navigate to a good location where you will pull a GitHub repo. Create a directory that you might pull in a few repos for further training. Example shown for the scratch data in Scientific Computing.
 
 ```
 $ cd /data/scratch/a/good/location/
 ```
 
 5a. Running this session for the first time
-Clone the github repo and then navigate to that directory. Then, you will need to make sure that python and nextflow are installed in a virtual environment.
+Clone the GitHub repo and then navigate to that directory. Then, you will need to make sure that python and Nextflow are installed in a virtual environment.
 
 ```
 $ git clone git@github.com:ICR-RSE-Group/nextflow-toy.git

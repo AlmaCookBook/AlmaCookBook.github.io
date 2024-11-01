@@ -1,9 +1,9 @@
-# Installing R Packages from github
+# Installing R Packages from GitHub
 
-R packages can be installed from github, and these can be troublesome in terms of their dependencies as they are less community tested.
-This example shows installatikon of the TwoSampleMR package from github, with an explanation of why some packages are manually installed.  
+R packages can be installed from GitHub, and these can be troublesome in terms of their dependencies as they are less community tested.
+This example shows installation of the TwoSampleMR package from GitHub, with an explanation of why some packages are manually installed.  
 
-Note if you are trying to install a package and you get streasm of error messages, the first 
+Note if you are trying to install a package and you get stream of error messages, the first 
 thing to try it to install those packages in mamba with "r-" prepended as below in step 3.
 
 **If you haven't already, follow the [setup mamba instructions](mamba-first.md) to get mamba working.**

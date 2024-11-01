@@ -20,7 +20,7 @@ Currently Loaded Modules:
   1) slurm-21.08.5   2) Mamba/23.1.0-0
 ```
 
-in addition to any other modules you may have already loaded. You can further check that the `mamba` and `conda` commands are now
+In addition to any other modules you may have already loaded. You can further check that the `mamba` and `conda` commands are now
 available for you to use, via `mamba --version`, which should return the output:
 
 ```
@@ -106,7 +106,7 @@ You should now be ready to use conda.
 
 ***
 
-## 4. Adding pre-loaded path for ALma
+## 4. Adding preloaded path for Alma
 Alma has some preloaded environments that you can use if you are looking to just use a single tool (you can't add to the environments). You can add these to your path by running:
 
 ```console

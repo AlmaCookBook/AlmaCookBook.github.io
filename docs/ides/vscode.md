@@ -11,7 +11,7 @@ To install VSCode, go to the [VSCode website](https://code.visualstudio.com/) an
 ## VSCode Tutorials
 - [Getting started with VSCode](https://code.visualstudio.com/docs/python/python-tutorial). This introduction to VSCode covers the basics of using the editor, using packages, using virtual environments by wiriting a simple "roll the dice" application.
 - [VSCode and python learning path modules](https://learn.microsoft.com/en-us/training/browse/?products=vs-code&terms=python). This is a collection of modules that cover the basics of using VSCode with python.
-- [Introduction to computer science with VSCode and python](https://vscodeedu.com/courses/intro-to-python). This 19 hour course is a fully comprehensice introduction to computer science using VSCode and python./ It covers the basics of programming, data structures, algorithms, along with debugging, testing, and version control.
+- [Introduction to computer science with VSCode and python](https://vscodeedu.com/courses/intro-to-python). This 19 hour course is a fully comprehensive introduction to computer science using VSCode and python./ It covers the basics of programming, data structures, algorithms, along with debugging, testing, and version control.
 
 
 ## Extensions
@@ -37,7 +37,7 @@ VSCode has a number of extensions that allow you to develop code remotely on a d
 
 The Remote-SSH extension allows you to connect to a remote machine over SSH and develop code on that machine. The Remote-Containers extension allows you to develop code in a container, and the Remote - WSL extension allows you to develop code in the Windows Subsystem for Linux.  
 
-To use vscode for remote-ssh development follow the [remote-ssh instructions](remote.md).  
+To use VSCode for remote-ssh development follow the [remote-ssh instructions](remote.md).  
 
 ## Debugging
 VSCode has built-in support for debugging code written in a number of languages. You can configure debugging settings in the `.vscode/launch.json` file in your project, and then start a debugging session by clicking on the Debug icon in the Activity Bar on the side of the window.
@@ -49,10 +49,10 @@ VSCode has built-in support for version control with Git. You can view and commi
 VSCode has an integrated terminal that allows you to run commands and scripts from within the editor. You can open the terminal by clicking on the Terminal icon in the Activity Bar on the side of the window, or by pressing `Ctrl + `.
 
 ## Keybindings
-VSCode has a large number of keyboard shortcuts that allow you to perform common tasks quickly and efficiently. You can view and customise the keybindings by clicking on the gear icon in the bottom left of the window, and then selecting Keyboard Shortcuts.
+VSCode has keyboard shortcuts that allow you to perform common tasks quickly and efficiently. You can view and customise the keybindings by clicking on the gear icon in the bottom left of the window, and then selecting Keyboard Shortcuts.
 
 ## Themes
-VSCode has a large number of themes available that allow you to customise the appearance of the editor. You can browse and install themes from within VSCode by clicking on the gear icon in the bottom left of the window, and then selecting Color Theme.
+VSCode has many themes available that allow you to customise the appearance of the editor. You can browse and install themes from within VSCode by clicking on the gear icon in the bottom left of the window, and then selecting Color Theme.
 
 ## Snippets
 VSCode has a large number of snippets available that allow you to quickly insert code templates for common tasks. You can browse and install snippets from within VSCode by clicking on the gear icon in the bottom left of the window, and then selecting User Snippets.

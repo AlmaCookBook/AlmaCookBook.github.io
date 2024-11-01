@@ -1,9 +1,9 @@
 # ICR GitLab Installation
 
-The ICR has an internal gitlab installation hosted at: [https://git.icr.ac.uk/](https://git.icr.ac.uk). This is internal to the ICR, accessible only on site or on the VPN.
+The ICR has an internal GitLab installation hosted at: [https://git.icr.ac.uk/](https://git.icr.ac.uk). This is internal to the ICR, accessible only on site or on the VPN.
 
 ## Setting up an ssh key
-You may want access to the gitlab server from your local machine, or from Alma. To do this you will need to set up an ssh key and the instructions that follow are suitable for both Alma or your local machine, and will need to be done on both if you wish to access repositories from them.
+You may want access to the GitLab server from your local machine, or from Alma. To do this you will need to set up an ssh key and the instructions that follow are suitable for both Alma or your local machine, and will need to be done on both if you wish to access repositories from them.
 
 ### Step 1: Generate a new ssh key, if you need one
 
@@ -41,7 +41,7 @@ The key's randomart image is:
 You now need to copy the public key and paste it into GitLab.  
 - Open the file `~/.ssh/id_rsa.pub` with a text editor and copy the contents (or cat ~/.ssh/id_rsa.pub).  
 - Go to the GitLab website and navigate to your profile settings on the left.  
-- In the left hand menu, click on `SSH Keys`  
+- In the left-hand menu, click on `SSH Keys`  
 - Choose "Add new key" and paste the key into the box.  
 - Click `Add Key` and you are done!.  
 

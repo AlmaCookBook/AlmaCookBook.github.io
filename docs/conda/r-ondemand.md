@@ -2,9 +2,9 @@
 
 Uses the central build and not environments
 
-It is possible to use Jupyter notebook with R on alma for something interactive.  
+It is possible to use Jupyter notebook with R on Alma for something interactive.  
 
-To do this you create a conda environment in [a similar way to python](python-ondemand.md), and then install R and the IRkernel.  This is a bit more complicated than python, but it is possible.  You can then run R in a Jupyter notebook.
+To do this you create a conda environment in [similarly to python](python-ondemand.md), and then install R and the IRkernel.  This is a bit more complicated than python, but it is possible.  You can then run R in a Jupyter notebook.
 
 
 
