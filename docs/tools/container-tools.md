@@ -25,7 +25,7 @@ Note the --bind argument is obligatory, the container has hard coded into it the
 
 ### pvactools
 [pVACtools](https://pvactools.readthedocs.io/en/latest/install.html) can be difficult to install and run on Alma so we have created a singularity image located in the shared singularity cache space.  
-The sofwtare is build as a [docker image](https://pvactools.readthedocs.io/en/latest/pvacseq/getting_started.html#pvacseq-docker)) but can be run through singularity on Alma. To get the help you can run:
+The software is built as a [docker image](https://pvactools.readthedocs.io/en/latest/pvacseq/getting_started.html#pvacseq-docker) but can be run through singularity on Alma. To get the help you can run:
 ```
 singularity exec /data/scratch/shared/SINGULARITY-DOWNLOAD/tools/.singularity/pvactools_latest.sif pvacseq run -h
 ```
@@ -34,6 +34,7 @@ An example to call the singularity image is, where you have created an out6 dire
 ```
 singularity exec --bind ./out6:/out6 --bind ./pvacseq_example_data:/pvaseq_example_data pvactools_latest.sif pvacseq run pvacseq_example_data/annotated.expression.vcf.gz HCC1395_TUMOR_DNA HLA-A*29:02,HLA-B*45:01,DRB1*04:05 all out6 -e1 8,9,10 -e2 15
 ```
+Note the way that directories inside singularity have to first be declared and mapped with the `--bind` parameter.
 
 ---  
 
