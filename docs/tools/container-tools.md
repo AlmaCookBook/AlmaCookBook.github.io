@@ -32,7 +32,11 @@ singularity exec /data/scratch/shared/SINGULARITY-DOWNLOAD/tools/.singularity/pv
 
 An example to call the singularity image is, where you have created an out6 direcory and have your example data in pvacseq_example_data:  
 ```
-singularity exec --bind ./out6:/out6 --bind ./pvacseq_example_data:/pvaseq_example_data pvactools_latest.sif pvacseq run pvacseq_example_data/annotated.expression.vcf.gz HCC1395_TUMOR_DNA HLA-A*29:02,HLA-B*45:01,DRB1*04:05 all out6 -e1 8,9,10 -e2 15
+singularity exec \
+--bind ./out6:/out6 \
+--bind ./pvacseq_example_data:/pvaseq_example_data \
+/data/scratch/shared/SINGULARITY-DOWNLOAD/tools/.singularity/pvactools_latest.sif \
+pvacseq run pvacseq_example_data/annotated.expression.vcf.gz HCC1395_TUMOR_DNA HLA-A*29:02,HLA-B*45:01,DRB1*04:05 all out6 -e1 8,9,10 -e2 15
 ```
 Note the way that directories inside singularity have to first be declared and mapped with the `--bind` parameter.
 
