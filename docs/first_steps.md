@@ -66,7 +66,7 @@ For any help or questions email [scientific computing](mailto:schelpdesk@icr.ac.
 
 ---  
 
-8. **Connection to Alma and using Slurm**
+### 8. **Connection to Alma and using Slurm**
 Alma clusters are hosted on : alma.icr.ac.uk.
 
 You can access your /home/ repository via ssh, as follows:
