@@ -21,6 +21,15 @@ You want to have it set up with ssh access from Alma to GitHub.
     - Otherwise [generate a new one](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key).
     - Then [add the ssh key to github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
+For gitlab, the ~/.ssh/config file needs the gitlab credentials added as:
+```
+# Private GitLab instance
+Host ralcraft.git.icr.ac.uk
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ecdsa
+```
+Note that is seems to prefer the ecdsa keygen: `ssh-keygen -t ecdsa -C comment` add the contents of the .pub file to the ssh keys on gitlab (search ssh-key).  
+
 ### 3. **The Alma fileshare**  
 Samba servers exist for mounting easily a remote system on your Machine, for both SCRATCH and RDS.
 This allows you to move files between your local machine and Alma and to edit files directly on Alma. If you prefer (or need to access home), there are various browser applications such as WinSCP for the file system.
