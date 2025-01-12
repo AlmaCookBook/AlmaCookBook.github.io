@@ -2,9 +2,9 @@
 # Sustainable Computing at the ICR
 This is a collection of resources and advice on sustainable computing at the ICR. The advice comes from a collaboration between groups at the ICR engaged with the [GreenDiSC initiative for sustainable computing](https://www.software.ac.uk/GreenDiSC).  
 
-- Breast Cancer Research - Data Science Team, contact Santiago Madera.  
-- Research Software Engineering Team, contact Rachel Alcraft.  
-- Data Science Team, contact Jacob Househam.  
+- Breast Cancer Research - Data Science Team, contact **Santiago Madera**.  
+- Research Software Engineering Team, contact **Rachel Alcraft**.  
+- Data Science Team, contact **Jacob Househam**.  
 
 For any help or questions email [scientific computing](mailto:schelpdesk@icr.ac.uk) and ask for the RSE team.  
 
@@ -102,7 +102,7 @@ Rightsizing is a buzzworrd, it means not overprovisioning resources, and is one 
 The HPC cluser is managed and upgraded on a schedule based on standard practices and the carbon cost of production and disposal need to be factored into that relatively short time period of equipement use. Extending the life of hardware is one of the best ways to reduce the carbon footprint, there is a balance to be struck between the cost of maintenance and the cost of disposal and production. 
 
 ### Machine learning and AI
-Improvements in hardware have been an enabler for AI and machine learning, but the carbon cost of these models is high. The size and use of models is growing, and they carry ethical implications. Generally ML models are not time critical so they can benefit from demand shifting. ALso, there are many prettrained models available so using an existing model is more efficient than training a new one. If there is not a model for your needs, transfer learning will take an existing model and adapt it to your data.
+Improvements in hardware have been an enabler for AI and machine learning, but the carbon cost of these models is high. The size and use of models is growing, and they carry ethical implications. Generally ML models are not time critical so they can benefit from demand shifting. Also, there are many pre-trained models available so using an existing model is more efficient than training a new one. If there is not a model for your needs, transfer learning will take an existing model and adapt it to your data.
 
 ### Measuring and monitoring
 When talking about the carbon costs we often talk about scopes 1-3, where scope 1 is the direct emissions from the activities of the organisation, scope 2 is the indirect emissions from the energy used by the organisation, and scope 3 is the indirect emissions from the supply chain and the use of the products. 
@@ -110,11 +110,11 @@ When talking about the carbon costs we often talk about scopes 1-3, where scope 
 There is little clarity for what this means for software creation. But, from your persepctive as a user of the HPC facilities, your main responsibity is for the costs of your compute time and storage on Alma and RDS. These can be measured and monitored with green-alma and sjane respectively. You can take action to monitor these to understand the approirateness of the costs. It is not necessarily the case that you are using an inappropriate amount of resources, but it is important to be aware of the costs and to be able to justify them. 
 
 ### Co-benefits
-Eco-friendly practices have co-benefits that can help motivate you, and also sell the idea to colleagues and management. 
+Eco-friendly practices have co-benefits that can help motivate you, and also sell the idea to colleagues and management.  
 - Money saving - the cost of energy is a significant part of the cost of running a data centre, and so saving energy will save money.  
 - Time saving - if the code is more efficient it will run faster and so save time.  
-- Better code - the code will be more efficient and better tested so more reliable, easier to maintain and understand. 
-- Better collaboration - the code will be more readable and so easier to work with others. 
-- Better science - clearer code will be more reliable, reusable and reproducible.
+- Better code - the code will be more efficient and better tested so more reliable, easier to maintain and understand.  
+- Better collaboration - the code will be more readable and so easier to work with others.  
+- Better science - clearer code will be more reliable, reusable and reproducible.  
 
 ---  
