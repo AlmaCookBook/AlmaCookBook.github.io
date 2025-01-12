@@ -3,6 +3,7 @@ nav:
   - Home: 'index.md'
   - About: 'about.md'
   - First Steps: 'first_steps.md'
+  - Sustainable computing: 'green.md'
   - Scientific tools:
     - Overview: 'tools/overview.md'
     - Container tools: 'tools/container-tools.md'
