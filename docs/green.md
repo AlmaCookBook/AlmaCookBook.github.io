@@ -40,14 +40,13 @@ We’re inviting all members of staff to participate in these sustainability tra
 These courses lead to a professional certificate from IEMA, (the Institute of Environmental Management and Assessment). 
 - [Software carpentries](https://training.icr.ac.uk) 
 At the ICR, the RSE team, in collaboration with the Data Science team, deliver caprentry courses in Python, R, Git and Unix. These are designed to help you to be more efficient in your coding and to work more effectively with others, and by using best practices in coding you can reduce the carbon footprint of your work. We use the carpentry materials from the [Software Carpentry](https://software-carpentry.org/) organisation.  
-
-  - [Python](https://training.icr.ac.uk/coursed.php?course=1200)  
-  - [R](https://training.icr.ac.uk/coursed.php?course=1218)  
-  - [Bash](https://training.icr.ac.uk/coursed.php?course=1215)  
-  - [Git](https://training.icr.ac.uk/coursed.php?course=1216)  
-  - [Image processing with python](https://training.icr.ac.uk/coursed.php?course=1217)  
-  - [Genomics](https://training.icr.ac.uk/coursed.php?course=1219)  
-  - Python optimisation - to be announced soon  
+  -- [Python](https://training.icr.ac.uk/coursed.php?course=1200)  
+  -- [R](https://training.icr.ac.uk/coursed.php?course=1218)  
+  -- [Bash](https://training.icr.ac.uk/coursed.php?course=1215)  
+  -- [Git](https://training.icr.ac.uk/coursed.php?course=1216)  
+  -- [Image processing with python](https://training.icr.ac.uk/coursed.php?course=1217)  
+  -- [Genomics](https://training.icr.ac.uk/coursed.php?course=1219)  
+  -- Python optimisation - to be announced soon  
 
 - Induction on computational sustainability - this is to be announced soon
 
