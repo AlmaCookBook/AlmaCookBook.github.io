@@ -1,4 +1,4 @@
-<p><img style="float: left;" height="50" src="assets/rse_green.png"></p>
+<img style="float: left;" height="50" src="assets/rse_green.png">
 
 ---  
 # Sustainable Computing at the ICR
