@@ -111,6 +111,7 @@ There is little clarity for what this means for software creation. But, from you
 
 ### Co-benefits
 Eco-friendly practices have co-benefits that can help motivate you, and also sell the idea to colleagues and management.  
+
 - Money saving - the cost of energy is a significant part of the cost of running a data centre, and so saving energy will save money.  
 - Time saving - if the code is more efficient it will run faster and so save time.  
 - Better code - the code will be more efficient and better tested so more reliable, easier to maintain and understand.  
