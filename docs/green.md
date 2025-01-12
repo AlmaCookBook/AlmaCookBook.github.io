@@ -39,7 +39,8 @@ We’ve taken some major steps towards this already, like developing science-bas
 We’re inviting all members of staff to participate in these sustainability training courses. They’ll provide opportunities to develop actions and initiatives to create change in your area of work, and to learn what the ICR is doing towards sustainability.
 These courses lead to a professional certificate from IEMA, (the Institute of Environmental Management and Assessment). 
 - [Software carpentries](https://training.icr.ac.uk) 
-At the ICR, the RSE team, in collaboration with the Data Science team, deliver caprentry courses in Python, R, Git and Unix. These are designed to help you to be more efficient in your coding and to work more effectively with others, and by using best practices in coding you can reduce the carbon footprint of your work. We use the carpentry materials from the [Software Carpentry](https://software-carpentry.org/) organisation.
+At the ICR, the RSE team, in collaboration with the Data Science team, deliver caprentry courses in Python, R, Git and Unix. These are designed to help you to be more efficient in your coding and to work more effectively with others, and by using best practices in coding you can reduce the carbon footprint of your work. We use the carpentry materials from the [Software Carpentry](https://software-carpentry.org/) organisation.  
+
   - [Python](https://training.icr.ac.uk/coursed.php?course=1200)  
   - [R](https://training.icr.ac.uk/coursed.php?course=1218)  
   - [Bash](https://training.icr.ac.uk/coursed.php?course=1215)  
