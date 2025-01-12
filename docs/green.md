@@ -1,13 +1,11 @@
+![GreenLogo](assets/rse_green.png "GreenLogo") 
 # Sustainable Computing at the ICR
-![GreenLogo](assets/rse_green.png "GreenLogo")  
 This is a collection of resources and advice on sustainable computing at the ICR. The advice comes from a collaboration between groups at the ICR engaged with the [GreenDiSC initiative for sustainable computing](https://www.software.ac.uk/GreenDiSC).  
 - Breast Cancer Research - Data Science Team, contact Santiago Madera.  
 - Research Software Engineering Team, contact Rachel Alcraft.  
 - Data Science Team, contact Jacob Househam.  
 
 For any help or questions email [scientific computing](mailto:schelpdesk@icr.ac.uk) and ask for the RSE team.  
-
-
 
 ## A quick summary of practical actions
 
