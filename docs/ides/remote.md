@@ -13,7 +13,7 @@ An adaptation for Alma follows:
 - You need to download the [remote-ssh extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 ### SSH host setup
-- You need an ssh key/pair for alma set up. Instructions are given on the VSCode instructions for [ssh-keygen](https://code.visualstudio.com/docs/remote/troubleshooting#_improving-your-security-with-a-dedicated-key) if you don't have this already.
+- You need an ssh key/pair for Alma set up. You can find the instructions in the ['First Steps'](https://almacookbook.github.io/first_steps/) tab under 'Setting up ssh key for Alma'.
 
 **EITHER:**  
 ### Connect to a remote host: login node
