@@ -13,7 +13,7 @@ In order to seamlessly log into Alma without having to type in your password, yo
 
 1. Generate public and a private key
 
-Mac:
+Mac/Linux/WSL:
 ```
 # command line
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519-remote-ssh
