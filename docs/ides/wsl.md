@@ -24,7 +24,7 @@ code .
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
-## GitLab - internal pr external
+## GitLab - internal or external
 
 1. An ssh key for gitlab
 
@@ -43,3 +43,7 @@ Host <your_usernames>.git.icr.ac.uk
   IdentityFile ~/.ssh/id_ecdsa
 ```
 
+## VSCode extensions
+copilot
+ssh remote
+python
