@@ -1,8 +1,12 @@
 # A Basic Loading of a MuSpAn Dataset
-In order to use MuSpAn you need to secure a license. Request the code from: https://www.muspan.co.uk/get-the-code and you willr eceieve and email with the username and password needed for the install.
+In order to use MuSpAn you need to secure a license.  
+Request the code from: https://www.muspan.co.uk/get-the-code and you will receieve an 
+email with the username and password needed for the install.
 
 
-We recommend using conda or mamba to install the muspan package. The following will create a new conda environment called `muspan-env` and install the package in an environment you can use in a jupyter notebook:
+We recommend using conda or mamba to install the muspan package. 
+The following will create a new conda environment called `muspan-env` and install 
+the package in an environment you can use in a jupyter notebook:
 
 ```bash
 conda create -y -n muspan-env -c conda-forge python=3.12 

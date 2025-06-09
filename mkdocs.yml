@@ -13,7 +13,7 @@ nav:
     - 'GitHub': 'vcs/github.md'
   - IDEs:
     - 'VSCode': 'ides/vscode.md'
-    - 'JupyterLan': 'ides/jupyter.md'
+    - 'JupyterLab': 'ides/jupyter.md'
     - 'Campus program': 'ides/campus.md'
     - 'remote-ssh': 'ides/remote.md'            
   - Environments:    
