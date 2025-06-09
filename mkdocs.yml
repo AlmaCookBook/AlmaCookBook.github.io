@@ -13,6 +13,7 @@ nav:
     - 'GitHub': 'vcs/github.md'
   - IDEs:
     - 'VSCode': 'ides/vscode.md'
+    - 'VSCode': 'ides/jupyter.md'
     - 'Campus program': 'ides/campus.md'
     - 'remote-ssh': 'ides/remote.md'            
   - Environments:    
@@ -39,6 +40,8 @@ nav:
   - Recipes:
     - 'Matlab-From-Python': 'recipes/matlab-python.md'
     - 'TensorFlow-On-GPU': 'recipes/tensorflow-gpu.md'
+    - 'TensorFlow-On-GPU': 'recipes/model.md'
+    - 'TensorFlow-On-GPU': 'recipes/muspan.md'
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   #- Training:
