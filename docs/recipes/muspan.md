@@ -1,6 +1,6 @@
 # A Basic Loading of a MuSpAn Dataset
 In order to use MuSpAn you need to secure a license.  
-Request the code from: https://www.muspan.co.uk/get-the-code and you will receieve an 
+Request the code from: [https://www.muspan.co.uk/get-the-code](https://www.muspan.co.uk/get-the-code) and you will receieve an 
 email with the username and password needed for the install.
 
 
