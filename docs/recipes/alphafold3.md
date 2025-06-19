@@ -47,7 +47,7 @@ singularity exec \
     --bind <DATABASES_DIR>:/root/public_databases \
     /data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif \
     python run_alphafold.py \
-    --flash_attention_implementation=xla \ # THIS IS IMPORTANT
+    --flash_attention_implementation=xla \
     --json_path=/root/af_input/fold_input.json \
     --model_dir=/root/models \
     --db_dir=/root/public_databases \
