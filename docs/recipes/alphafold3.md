@@ -45,7 +45,6 @@ singularity exec \
     --bind $HOME/af_output:/root/af_output \
     --bind <MODEL_PARAMETERS_DIR>:/root/models \
     --bind <DATABASES_DIR>:/root/public_databases \
-    --gpus all \
     /data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif \
     python run_alphafold.py \
     --flash_attention_implementation=xla \ # THIS IS IMPORTANT
