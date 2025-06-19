@@ -6,8 +6,16 @@
 git clone git@github.com:google-deepmind/alphafold3.git
 ```
 
+### Create input and output directories
+
+```
+mkdir af_output
+mkdir af_input
+```
+
+
 ### Prep necessary file
-Once you have cloned the repo, you can test your setup using example JSON file named fold_input.json:
+Once you have cloned the repo, you can test your setup using example JSON file named fold_input.json. Create it in the `af_input` folder:
 
 ```
 {
