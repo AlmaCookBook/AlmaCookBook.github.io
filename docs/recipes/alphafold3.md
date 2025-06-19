@@ -6,7 +6,7 @@
 git clone git@github.com:google-deepmind/alphafold3.git
 ```
 
-### Create input and output directories
+### Create input and output directories in the cloned repo
 
 ```
 mkdir af_output
@@ -35,7 +35,7 @@ Once you have cloned the repo, you can test your setup using example JSON file n
 ```
 
 ### Run Alphafold3
-You can then create bash script within your AlphaFold3 directory (such as `af3-test.sh`) with specified number of CPUs and GPUs for your needs and run AlphaFold3 specifing necessary flags:
+You can then create bash script (which you can then run with `sbatch` on the cluster) within your AlphaFold3 directory (such as `af3-test.sh`) with specified number of CPUs and GPUs for your needs and run AlphaFold3 specifying necessary flags:
 
 ```
 #!/bin/bash
