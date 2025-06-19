@@ -33,11 +33,11 @@ You can then create bash script within your AlphaFold3 directory (such as `af3-t
 #!/bin/bash
 #SBATCH --job-name=af3
 #SBATCH --partition=gpu
-#SBATCH --output=results/af3.out
-#SBATCH --error=results/af3.err
+#SBATCH --output=af_output/af3.out
+#SBATCH --error=af_output/af3.err
 #SBATCH --time=00:20:00
-#SBATCH --cpus-per-task=20 # Important
-#SBATCH --gres=gpu:1 # Important
+#SBATCH --cpus-per-task=20 
+#SBATCH --gres=gpu:1
 
 singularity exec \
     --nv \
