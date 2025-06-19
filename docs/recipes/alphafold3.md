@@ -7,7 +7,7 @@ git clone git@github.com:google-deepmind/alphafold3.git
 ```
 
 ### Prep necessary file
-Once you have cloned the repo, you can test your setup using example JSON file named fold_input.json (comes with the cloned directory, you can modify it):
+Once you have cloned the repo, you can test your setup using example JSON file named fold_input.json:
 
 ```
 {
