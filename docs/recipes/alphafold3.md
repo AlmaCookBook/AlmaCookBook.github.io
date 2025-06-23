@@ -15,7 +15,7 @@ mkdir af_input
 
 
 ### Prep necessary file
-Once you have cloned the repo, you can test your setup using example JSON file named fold_input.json. Create it in the `af_input` folder:
+Once you have cloned the repo, create a JSON file for your protein sequence. We will be using 2PV7 protein sequence - the example provided on the AlphaFold3 GitHub. Create the JSON file in the `af_input` folder (we will name ours `fold_input.json`):
 
 ```
 {
@@ -34,8 +34,10 @@ Once you have cloned the repo, you can test your setup using example JSON file n
 }
 ```
 
-### Run Alphafold3
-You can then create bash script (which you can then run with `sbatch` on the cluster) within your AlphaFold3 directory (such as `af3-test.sh`) with specified number of CPUs and GPUs for your needs and run AlphaFold3 specifying necessary flags:
+Input documentation can be found [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
+
+### Create a bash script
+You can then create bash script within your AlphaFold3 directory (such as `af3-test.sh`) with specified number of CPUs and GPUs for your needs and run AlphaFold3 specifying necessary flags:
 
 ```
 #!/bin/bash
@@ -70,13 +72,43 @@ Where:
 
 `<DATABASES_DIR>` - path to your database
 
-There are various flags that you can pass to the run_alphafold.py command, to list them all run python run_alphafold.py --help. Two fundamental flags that control which parts AlphaFold 3 will run are:
+*Important notes:* 
+
+1) `/data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif` is a path that contains the AlphaFold3 singularity image to be used by everyone in the institute. If you would like to build your own, follow the next section on "What you need to build Alphafold3 Docker image yourself".
+
+2) You need to request the access to model parameters yourself using the [following form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform).
+
+3) You will need to fetch for the database yourself using the `fetch_databases.sh` script that comes with the cloned repo
+
+There are various flags that you can pass to the run_alphafold.py command, to list them all run python run_alphafold.py --help. Two fundamental flags that control which parts AlphaFold3 will run are:
 
 `--run_data_pipeline` (defaults to true): whether to run the data pipeline, i.e. genetic and template search. This part is CPU-only, time consuming and could be run on a machine without a GPU.
 
 `--run_inference` (defaults to true): whether to run the inference. This part requires a GPU.
 
-### What you need to build Alphafold3 Docker image
+### Run sbatch command
+After creating the bash script, submit the script with `sbatch` command:
+
+```
+sbatch af3-test.sh
+```
+
+if you run:
+
+```
+squeue -u YOUR_USERNAME
+```
+
+You will be able to see your `af3` job running. The job will run for considerable time! (how long depends on your input sequence) 
+
+The outputs will be saved in the `af_output` folder - both the `af3.err` (job runtime errors) and `af3.out` (job runtime outputs) files and a folder named after your protein in the JSON file, in our case that is "2PV7":
+
+![alt text](../assets/af3-output.png)
+
+The output documentation can be found [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/output.md).
+
+
+# What you need to build Alphafold3 Docker image yourself 
 
 #### 1. Use appropriate hardware.
 
