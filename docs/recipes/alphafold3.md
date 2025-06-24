@@ -1,5 +1,14 @@
 # Running Alphafold3 on Alma
 
+This guide outlines the steps required to run AlphaFold3 on the Alma HPC. AlphaFold3 is a powerful tool for predicting protein structures, but its setup and usage require careful preparation, including downloading model parameters, configuring input files, and leveraging Singularity. These instructions will walk you through everything from requesting access to model parameters, to preparing your job submission script, to interpreting the output. Please note that AlphaFold3 is available only for non-commercial use, and access to its model parameters must be requested individually.
+
+*IMPORTANT:*
+
+* You need to request the access to Alphafold3 model parameters yourself using the [following form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform). *You can only use Alphafold3 for non-commercial purposes.* Once the form has been submitted, you will receive an email from Google (after 2-3 days) with a download link. You can then store those parameters on Scratch/RDS. 
+
+
+A [video tutorial](https://www.youtube.com/watch?v=iIubA9VnutQ&list=PLKk58i7WAwK48DqrcBRTOntUUGAefG-R-) on how to run Alphafold3 following the AlmaCookBook instructions below can be found on our [YouTube channel](https://www.youtube.com/@icrrseteam) (the video is unlisted).
+
 ### Clone Alphafold3 (Adapted from [AlaphaFold3 GitHub Repo](https://github.com/google-deepmind/alphafold3))
 
 ```
@@ -68,17 +77,13 @@ Where:
 
 `$HOME` - is the path to the directory where you are running AlphaFold3 from 
 
-`<MODEL_PARAMETERS_DIR>`- path to your downloaded model parameters
+`<MODEL_PARAMETERS_DIR>` - path to your downloaded model parameters
 
 `<DATABASES_DIR>` - path to your database
 
-*Important notes:* 
+*Important note:* 
 
-1) `/data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif` is a path that contains the AlphaFold3 singularity image to be used by everyone in the institute. If you would like to build your own, follow the next section on "What you need to build Alphafold3 Docker image yourself".
-
-2) You need to request the access to model parameters yourself using the [following form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform).
-
-3) You will need to fetch for the database yourself using the `fetch_databases.sh` script that comes with the cloned repo
+* `/data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif` is a path that contains the AlphaFold3 singularity image to be used by everyone in the institute. If you would like to build your own, follow the next section on "What you need to build Alphafold3 Docker image yourself".
 
 There are various flags that you can pass to the run_alphafold.py command, to list them all run python run_alphafold.py --help. Two fundamental flags that control which parts AlphaFold3 will run are:
 
