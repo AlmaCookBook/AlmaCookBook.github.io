@@ -17,7 +17,7 @@ You can find a [video tutorial](https://www.youtube.com/watch?v=iIubA9VnutQ&list
 All material has been adapted from the [AlaphaFold3 GitHub repository](https://github.com/google-deepmind/alphafold3).
 
 
-### Connect to Alma and get an interactive parition
+### Connect to Alma and get an interactive partition
 
 ```bash
 ssh username@alma.icr.ac.uk
@@ -35,7 +35,7 @@ mkdir alphafold3
 cd alphafold3
 ```
 
-### Set up input and output folders in the `alphafold3` directory
+### Singularity Image and Execution Script
 
 AlphaFold3 package is wrapped up in a singularity image that is made available on Alma here `/data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif`.
 The code is invoked via the following [python code](https://raw.githubusercontent.com/google-deepmind/alphafold3/refs/heads/main/run_alphafold.py).
@@ -45,12 +45,13 @@ First copy the python code directly to the `alphafold3` directory:
 ```bash
 wget -O run_alphafold.py https://raw.githubusercontent.com/google-deepmind/alphafold3/refs/heads/main/run_alphafold.py
 ```
+
 #### Prepare input and output directories and files
 Running AlphaFold3 via calling `run_alphafold.py` requires mainly:
 * an input json file specifying the protein sequence
 * an output folder where results will be stored.
 
-Let's, create folders to store the input and output files:
+Let's, create empty folders to store the input and output files:
 
 ```bash
 mkdir af_input
@@ -64,7 +65,7 @@ Navigate to the `af_input` folder and create your JSON file (e.g. `fold_input.js
 nano af_input/fold_input.json
 ```
 
-Copy the following JSON object in the file.
+Copy the following JSON object and save in the file.
 ```json
 {
   "name": "2PV7",
@@ -166,7 +167,7 @@ Once the job finishes, outputs will be saved in the `af_output` directory:
 * af3.out — standard output log from the job
 * af3.err — error log, if any
 
-A folder named after your protein (e.g., `2PV7`), containing the predicted structure files and related results.
+If the job run is successful, your `af3.out` file will include "Done running 1 fold jobs." message. The number of folds depends on the number of structures you put in your JSON file. You will also have a folder named after your protein (e.g., `2PV7`), containing the predicted structure files and related results.
 
 Here’s an example of what the output directory might look like:
 
@@ -174,7 +175,7 @@ Here’s an example of what the output directory might look like:
 
 The output documentation can be found [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/output.md).
 
-# What you need to build Alphafold3 Docker image yourself - Important Notes
+# Alphafold3 Image - Hardware Specifications
 
 *IMPORTANT:*
 
@@ -216,6 +217,6 @@ ENV XLA_FLAGS="--xla_disable_hlo_passes=custom-kernel-fusion-rewriter"
 # ENV XLA_FLAGS="--xla_gpu_enable_triton_gemm=false"
 ```
 
-#### 3. Push Docker image to remote registry
+*IMPORTANT: Software Specification* 
 
 Docker is not supported on Alma. If you’re working on a system without Docker, you can use Singularity instead, which is available on Alma. In this case, you’ll need to push your Docker image to a remote registry (such as DockerHub) and then pull it as a Singularity image.
