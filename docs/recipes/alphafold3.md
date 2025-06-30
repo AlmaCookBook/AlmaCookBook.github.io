@@ -99,10 +99,12 @@ Create a bash script (e.g.,`af3-test.sh`) in `alphafold3` directory with the fol
 #SBATCH --cpus-per-task=20 
 #SBATCH --gres=gpu:1
 
+AF_DIR=$(pwd)
+
 singularity exec \
     --nv \
-    --bind $HOME/af_input:/root/af_input \
-    --bind $HOME/af_output:/root/af_output \
+    --bind $AF_DIR/af_input:/root/af_input \
+    --bind $AF_DIR/af_output:/root/af_output \
     --bind <MODEL_PARAMETERS_DIR>:/root/models \
     --bind /data/reference-data/alphafold_db:/root/public_databases \
     /data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif \
@@ -116,7 +118,7 @@ singularity exec \
 
 Where:
 
-* `$HOME` - is the path to the directory where you are running AlphaFold3 from 
+* `$AF_DIR` - is the path to the directory where you are running AlphaFold3 from 
 
 * `<MODEL_PARAMETERS_DIR>` - path to your downloaded model parameters
 
@@ -152,7 +154,7 @@ sbatch af3-test.sh
 After submitting your job with `sbatch af3-test.sh`, you can check its status using:
 
 ```bash
-squeue -u <YOUR_USERNAME>
+squeue -u $USER
 ```
 This command lists all your running and queued jobs. Look for the job named af3 to confirm it’s running.
 
@@ -182,17 +184,15 @@ The output documentation can be found [here](https://github.com/google-deepmind/
 
 Docker image only builds on appropriate hardware. We used the following workstation to build one for Alma:
 
-CPU: Intel Xeon Gold 5118 CPU 2.30GHz (Sockets: 1, Cores: 12, Threads: 24)
-
-GPU: Nvidia Quadro GV100 (32G)
-
-RAM: 128G
+* CPU: Intel Xeon Gold 5118 CPU 2.30GHz (Sockets: 1, Cores: 12, Threads: 24)
+* GPU: Nvidia Quadro GV100 (32G)
+* RAM: 128G
 
 #### 2. [OPTIONAL] Change the original Docker file if using CUDA Capability 7.x GPUs
 
-CUDA Compute Capability 7.x GPUs have limited numerical accuracy and performance (more [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/known_issues.md)). If you are using one of those on your system (Alma does), you need to change a few lines in the Dockerfile. 
+CUDA Compute Capability 7.x GPUs have limited numerical accuracy and performance (more [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/known_issues.md)). Since Alma uses such GPUs, you will need to modify a few lines in the Dockerfile.
 
-The original Dockerfile has the following lines near the end:
+Specifically, the original Dockerfile contains the following lines near the end:erfile. 
 
 ```bash
 # To work around a known XLA issue causing the compilation time to greatly
@@ -218,4 +218,4 @@ ENV XLA_FLAGS="--xla_disable_hlo_passes=custom-kernel-fusion-rewriter"
 
 #### 3. Push Docker image to remote registry
 
-Docker does not work on Alma. If you are using a system that does not have Docker, you can use Singularity (which is also what Alma has available). If that applies to you, you need to push the Docker image to a remote registry (like DockerHub) and pull a Singularity image.
+Docker is not supported on Alma. If you’re working on a system without Docker, you can use Singularity instead, which is available on Alma. In this case, you’ll need to push your Docker image to a remote registry (such as DockerHub) and then pull it as a Singularity image.
