@@ -1,55 +1,71 @@
 # Running Alphafold3 on Alma
 
-This guide outlines the steps required to run AlphaFold3 on the Alma HPC. AlphaFold3 is a powerful tool for predicting protein structures, but its setup and usage require careful preparation, including downloading model parameters, configuring input files, and leveraging Singularity. These instructions will walk you through everything from requesting access to model parameters, to preparing your job submission script, to interpreting the output. Please note that AlphaFold3 is available only for non-commercial use, and access to its model parameters must be requested individually.
+This guide outlines the steps required to run AlphaFold3 on the Alma HPC. AlphaFold3 is a powerful tool for predicting protein structures, but its setup and usage require careful preparation - including downloading model parameters, configuring input files, and leveraging Singularity. 
+Below, you’ll find step-by-step instructions covering everything from requesting model access to preparing job submission scripts and interpreting results.
+
+ **Please note** that AlphaFold3 is available only for non-commercial use, and access to its model parameters must be requested individually.
 
 *IMPORTANT:*
+* You’ll need to fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform) to request the model files. After submission, you’ll receive an email from Google (typically within 2–3 days) containing a download link. Once you have the files, store them in your Scratch or RDS space on Alma.
 
-* You need to request the access to Alphafold3 model parameters yourself using the [following form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform). *You can only use Alphafold3 for non-commercial purposes.* Once the form has been submitted, you will receive an email from Google (after 2-3 days) with a download link. You can then store those parameters on Scratch/RDS. 
+* Please make sure you read the legal documents on the [outputs terms of use](https://github.com/google-deepmind/alphafold3/blob/main/OUTPUT_TERMS_OF_USE.md), [weights terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md) and [weights prohibited use policy](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_PROHIBITED_USE_POLICY.md).
 
-* Please make sure you read legal documents on the [outputs terms of use](https://github.com/google-deepmind/alphafold3/blob/main/OUTPUT_TERMS_OF_USE.md), [weights terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md) and [weights prohibited use policy](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_PROHIBITED_USE_POLICY.md).
+* Alphafold3 only works on GPUs, therefore, you will be charged GPU rates, which is currently — 240p per GPU core per hour. 
 
-* Alphafold3 only works on GPUs, therefore, you will be charged GPU rates, which is currently 240p/(GPU core)-hour. 
+You can find a [video tutorial](https://www.youtube.com/watch?v=iIubA9VnutQ&list=PLKk58i7WAwK48DqrcBRTOntUUGAefG-R-) on how to run Alphafold3 using the AlmaCookBook instructions on our [YouTube channel](https://www.youtube.com/@icrrseteam). Please note the video is unlisted. 
+
+All material has been adapted from the [AlaphaFold3 GitHub repository](https://github.com/google-deepmind/alphafold3).
 
 
-A [video tutorial](https://www.youtube.com/watch?v=iIubA9VnutQ&list=PLKk58i7WAwK48DqrcBRTOntUUGAefG-R-) on how to run Alphafold3 following the AlmaCookBook instructions below can be found on our [YouTube channel](https://www.youtube.com/@icrrseteam) (the video is unlisted). 
+### Connect to Alma and get an interactive parition
 
-All material is adapted from [AlaphaFold3 GitHub Repo](https://github.com/google-deepmind/alphafold3).
-
-### Create a dedicated directory to run Alphafold3 on Scratch/RDS and `cd` into it
-
+```bash
+ssh username@alma.icr.ac.uk
+srun --pty -t 12:00:00 -p interactive bash
 ```
+### Navigate to either your Scratch or RDS directory
+```bash
+cd /data/scratch/<your-username>   # or /data/rds/<your-username>
+```
+
+### Create a dedicated directory to run Alphafold3 and `cd` into it
+
+```bash
 mkdir alphafold3
 cd alphafold3
 ```
 
-### Create input and output directories in the `alphafold3` directory
+### Set up input and output folders in the `alphafold3` directory
 
+AlphaFold3 package is wrapped up in a singularity image that is made available on Alma here `/data/rds/DIT/SCICOM/SCRSE/shared/singularity/alphafold3.sif`.
+The code is invoked via the following [python code](https://raw.githubusercontent.com/google-deepmind/alphafold3/refs/heads/main/run_alphafold.py).
+
+First copy the python code directly to the `alphafold3` directory:
+
+```bash
+wget -O run_alphafold.py https://raw.githubusercontent.com/google-deepmind/alphafold3/refs/heads/main/run_alphafold.py
 ```
-mkdir af_output
+#### Prepare input and output directories and files
+Running AlphaFold3 via calling `run_alphafold.py` requires mainly:
+* an input json file specifying the protein sequence
+* an output folder where results will be stored.
+
+Let's, create folders to store the input and output files:
+
+```bash
 mkdir af_input
+mkdir af_output
 ```
 
+Navigate to the `af_input` folder and create your JSON file (e.g. `fold_input.json`) using your preferred editor (`nano`, `vi` or `vim`)
 
-### Prep necessary files
-To prepare necessary files you can use your favourite text editor. For example using `nano`:
 
-```
-nano <FILE_NAME>.py # creating a python script
-```
-
-#### JSON file
-Once you have cloned the repo, create a JSON file for your protein sequence. We will be using 2PV7 protein sequence - the example provided on the AlphaFold3 GitHub. Create the JSON file in the `af_input` folder (such as `fold_input.json`).
-
-Example:
-
-Create `fold_input.json` file
-
-```
-nano fold_input.json
+```bash
+nano af_input/fold_input.json
 ```
 
 Copy the following JSON object in the file.
-```
+```json
 {
   "name": "2PV7",
   "sequences": [
@@ -65,55 +81,15 @@ Copy the following JSON object in the file.
   "version": 1
 }
 ```
+For more details on the input format, check the official [documentation](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
 
-Input documentation can be found [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
 
-#### `run_alphafold.py` script
+### Running AlphaFold3 via a Bash Script
+To run AlphaFold3 on Alma, you’ll typically create and submit a bash script that sets up the computational environment and launches the job with your specified resources (CPUs, GPUs, time, etc.). This script wraps the Singularity container execution and points to the right input, output, and model directories.
 
-Create a `run_alphafold.py` script in your `alphafold3` directory and paste the code provided in the following [link](https://raw.githubusercontent.com/google-deepmind/alphafold3/refs/heads/main/run_alphafold.py).
+Create a bash script (e.g.,`af3-test.sh`) in `alphafold3` directory with the following content and replace <MODEL_PARAMETERS_DIR> with the actual path where you stored `AlphaFold3 model parameters`.
 
-Example:
-
-Create `run_alphafold.py` file
-
-```
-nano run_alphafold.py
-```
-
-Then paste the code in the link (its very long, so we won't display all of it here):
-
-```
-# Copyright 2024 DeepMind Technologies Limited
-#
-# AlphaFold 3 source code is licensed under CC BY-NC-SA 4.0. To view a copy of
-# this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
-#
-# To request access to the AlphaFold 3 model parameters, follow the process set
-# out at https://github.com/google-deepmind/alphafold3. You may only use these
-# if received directly from Google. Use is subject to terms of use available at
-# https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
-
-"""AlphaFold 3 structure prediction script.
-
-AlphaFold 3 source code is licensed under CC BY-NC-SA 4.0. To view a copy of
-this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-cont...
-```
-
-### Create a bash script
-You can then create bash script in your `alphafold3` directory (such as `af3-test.sh`) with specified number of CPUs and GPUs for your needs and run AlphaFold3 specifying necessary flags.
-
-Example:
-Create `af3-test.sh` file
-
-```
-nano af3-test.sh
-```
-
-Copy the following script
-
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=af3
 #SBATCH --partition=gpu
@@ -140,11 +116,11 @@ singularity exec \
 
 Where:
 
-`$HOME` - is the path to the directory where you are running AlphaFold3 from 
+* `$HOME` - is the path to the directory where you are running AlphaFold3 from 
 
-`<MODEL_PARAMETERS_DIR>` - path to your downloaded model parameters
+* `<MODEL_PARAMETERS_DIR>` - path to your downloaded model parameters
 
-`/data/reference-data/alphafold_db` - path to protein database in ICR's shared data folder
+* `/data/reference-data/alphafold_db` - path to the protein database in ICR shared data folder
 
 *IMPORTANT:* 
 
@@ -160,27 +136,41 @@ There are various flags that you can pass to the run_alphafold.py command, to li
 
 `--run_inference` (defaults to true): whether to run the inference. This part requires a GPU.
 
-### Run `sbatch` command
-After creating the bash script, submit the script with `sbatch` command:
 
+### How to use the script?
+
+1. Make it executable:
+```bash
+chmod +x af3-test.sh
 ```
+
+2. Submit the job to Alma scheduler:
+```bash
 sbatch af3-test.sh
 ```
 
-if you run:
+After submitting your job with `sbatch af3-test.sh`, you can check its status using:
 
-```
+```bash
 squeue -u <YOUR_USERNAME>
 ```
+This command lists all your running and queued jobs. Look for the job named af3 to confirm it’s running.
 
-You will be able to see your `af3` job running. The job will run for considerable time! (depending on your input sequence) 
+Note: Depending on your protein sequence and resources requested, the job may take a considerable time to complete
 
-The outputs will be saved in the `af_output` folder - both the `af3.err` (job errors) and `af3.out` (job outputs) files and a folder named after your protein in the JSON file, in our case that is "2PV7":
+#### Checking the Outputs
+Once the job finishes, outputs will be saved in the `af_output` directory:
+
+* af3.out — standard output log from the job
+* af3.err — error log, if any
+
+A folder named after your protein (e.g., `2PV7`), containing the predicted structure files and related results.
+
+Here’s an example of what the output directory might look like:
 
 ![alt text](../assets/af3-output.png)
 
 The output documentation can be found [here](https://github.com/google-deepmind/alphafold3/blob/main/docs/output.md).
-
 
 # What you need to build Alphafold3 Docker image yourself - Important Notes
 
@@ -204,7 +194,7 @@ CUDA Compute Capability 7.x GPUs have limited numerical accuracy and performance
 
 The original Dockerfile has the following lines near the end:
 
-```
+```bash
 # To work around a known XLA issue causing the compilation time to greatly
 # increase, the following environment variable setting XLA flags must be enabled
 # when running AlphaFold 3. Note that if using CUDA capability 7 GPUs, it is
@@ -219,7 +209,7 @@ ENV XLA_CLIENT_MEM_FRACTION=0.95
 
 Since Alma has CUDA capability 7 GPU card, you need to:
 
-```
+```bash
 # Uncomment this line
 ENV XLA_FLAGS="--xla_disable_hlo_passes=custom-kernel-fusion-rewriter"
 # Comment out this line
