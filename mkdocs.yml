@@ -28,6 +28,9 @@ nav:
       - R scripts: 'conda/r-scripts.md'
       - R installs from github: 'conda/r-github.md'
       - RStudio ondemand: 'conda/r-ondemand.md'  
+  - Shiny Apps:
+    - Introduction: 'shiny-apps/introduction.md'
+    - Shiny R: 'shiny-apps/shiny-r.md'
   - Nextflow:
     #- nextflow vs slurm: 'workflows/nextflow.md'  
     - Nextflow version: 'workflows/nextflow-envs.md'
