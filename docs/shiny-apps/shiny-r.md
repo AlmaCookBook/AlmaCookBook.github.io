@@ -15,7 +15,7 @@ A Shiny app is built in two main parts:
 - Creates reactive outputs using `render*()` functions (e.g., `renderPlot()`, `renderTable()`).
 - Uses reactive expressions to update outputs automatically when inputs change.
 
-It's possible to place both UI and Server elements in one script App.R. However, I would recommend ui, server and any extra analysis code to be in separate scripts and that is the model I am following for the rest of this tutorial.
+While it's possible to include both the UI and server components in a single app.R script, I recommend separating the UI, server, and any additional analysis code into distinct scripts. This is the structure I will follow throughout the rest of this tutorial.
 
 ## How do UI and Server communicate?
 - Each UI output element (like `plotOutput("plot1")`), has an ID (i.e., `plot1`) and corresponds to a server-side render function (`output$plot1 <- renderPlot({...})`).
