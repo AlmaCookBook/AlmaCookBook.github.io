@@ -19,4 +19,4 @@ All carbon estimates are based on the methods described in:
 Keep in mind that calculations are based on this specific algorithm alone — results are indicative rather than precise.
 
 ## Running the Algorithm with Green Alma Notebooks
-Green Alma Notebooks provide an alternative way for running carbon analysis. You can explore your carbon footprint, run the Green Algorithms calculation on the server or locally, and visualise carbon emissions with plots. You can find the link to the repository [here](https://github.com/ICR-RSE-Group/green-alma-notebooks)
+Green Alma Notebooks provide an alternative way for running carbon analysis interactively. You can explore your carbon footprint, run the Green Algorithms calculation on the server or locally, and visualise carbon emissions with plots using simple Jupyter Notebooks. You can find the link to the repository [here](https://github.com/ICR-RSE-Group/green-alma-notebooks)
