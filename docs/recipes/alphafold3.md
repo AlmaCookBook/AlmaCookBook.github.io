@@ -16,6 +16,41 @@ You can find a [video tutorial](https://www.youtube.com/watch?v=iIubA9VnutQ&list
 
 All material has been adapted from the [AlaphaFold3 GitHub repository](https://github.com/google-deepmind/alphafold3).
 
+### Downloading AlphaFold Parameters
+
+#### Step 1: Download the Parameters
+Once you receive the download link, click it to download the file `af3.bin.zst`.
+
+#### Step 2: Moving the File to RDS or Scratch
+After downloading, you need to move the file to a suitable location on RDS or Scratch.
+
+You can do this in one of the following ways:
+
+1. **Via Mounted Fileshare (Recommended)**  
+  If RDS or Scratch is mounted on your local machine (e.g., via SMB), simply move the file using your file explorer (drag and drop).  
+  For details, see 'The Alma fileshare' section in [First Steps](first_steps.md).
+
+2. **Via `scp` in the Terminal**  
+  Use this method if you prefer the command line or the fileshare isn't mounted:
+
+    ```bash
+    scp -J username@alma.icr.ac.uk af3.bin.zst username@node01:/data/scratch/some/dir/
+    ```
+
+    Replace username and the path as appropriate.
+
+#### Step 3: Decompressing the Parameter File
+Once the file is on the server, load the zstd module:
+
+```bash
+module load zstd
+```
+Then decompress it to your desired directory (we recommend a folder like af3_model/):
+
+```bash
+zstd -d af3.bin.zst -o af3_model/af3.bin
+```
+You can then use the path to your parameters `some/dir/af3_model` as `<MODEL_PARAMETERS_DIR>`.
 
 ### Connect to Alma and get an interactive partition
 
