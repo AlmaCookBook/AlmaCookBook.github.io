@@ -6,6 +6,7 @@ Below, you’ll find step-by-step instructions covering everything from requesti
  **Please note** that AlphaFold3 is available only for non-commercial use, and access to its model parameters must be requested individually.
 
 *IMPORTANT:*
+
 * You’ll need to fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform) to request the model files. After submission, you’ll receive an email from Google (typically within 2–3 days) containing a download link. Once you have the files, store them in your Scratch or RDS space on Alma.
 
 * Please make sure you read the legal documents on the [outputs terms of use](https://github.com/google-deepmind/alphafold3/blob/main/OUTPUT_TERMS_OF_USE.md), [weights terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md) and [weights prohibited use policy](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_PROHIBITED_USE_POLICY.md).
@@ -40,7 +41,7 @@ You can do this in one of the following ways:
     Replace username and the path as appropriate.
 
 #### Step 3: Decompressing the Parameter File
-Once the file is on the server, load the zstd module:
+Log into Alma following "Connect to Alma and get an interactive partition" section. Once the file is on the server, load the zstd module:
 
 ```bash
 module load zstd
@@ -83,7 +84,9 @@ wget -O run_alphafold.py https://raw.githubusercontent.com/google-deepmind/alpha
 
 #### Prepare input and output directories and files
 Running AlphaFold3 via calling `run_alphafold.py` requires mainly:
+
 * an input json file specifying the protein sequence
+
 * an output folder where results will be stored.
 
 Let's, create empty folders to store the input and output files:
