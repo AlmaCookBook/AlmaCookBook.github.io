@@ -1,0 +1,2108 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../first_steps/">
+      
+      
+        <link rel="next" href="../tools/overview/">
+      
+      
+      <link rel="icon" href="../assets/icr_svg_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Sustainable computing - AlmaCookBook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sustainable-computing-at-the-icr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AlmaCookBook" class="md-header__button md-logo" aria-label="AlmaCookBook" data-md-component="logo">
+      
+  <img src="../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlmaCookBook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sustainable computing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlmaCookBook" class="md-nav__button md-logo" aria-label="AlmaCookBook" data-md-component="logo">
+      
+  <img src="../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    AlmaCookBook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First Steps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sustainable computing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sustainable computing
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-summary-of-practical-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      A quick summary of practical actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A quick summary of practical actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-you-do-to-be-more-sustainable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can you do to be more sustainable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-scientific-computing-do-to-be-more-sustainable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can Scientific Computing do to be more sustainable?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-training-at-the-icr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal training at the ICR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-overview-of-sustainable-practices-in-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      An overview of sustainable practices in computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An overview of sustainable practices in computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-carbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring carbon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#being-carbon-aware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Being carbon aware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-and-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine learning and AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring and monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-benefits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scientific tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Scientific tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/container-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/mamba-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mamba tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Version Control
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Version Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vcs/gitlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vcs/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IDEs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            IDEs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ides/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ides/jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JupyterLab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ides/campus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campus program
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ides/remote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    remote-ssh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Environments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/mamba-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mamba/Conda the first time
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/mamba-venvs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mamba environments'
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/python-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/python-ondemand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python jupyter ondemand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/python-venv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python-venv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            R
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/r-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/r-github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R installs from github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/r-ondemand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RStudio ondemand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Shiny Apps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Shiny Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shiny-apps/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shiny-apps/shiny-r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shiny R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Nextflow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Nextflow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/nextflow-envs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nextflow version
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/nf-core-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nf-core Install and test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Recipes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/nf-core-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nf-core sarek
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/recipe-nf-epitome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    epi2me-labs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Singularity and docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Recipes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/matlab-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab-From-Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/tensorflow-gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TensorFlow-On-GPU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/muspan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MuSpAn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/alphafold3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alphafold3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-quick-summary-of-practical-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      A quick summary of practical actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A quick summary of practical actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-you-do-to-be-more-sustainable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can you do to be more sustainable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-scientific-computing-do-to-be-more-sustainable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can Scientific Computing do to be more sustainable?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-training-at-the-icr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal training at the ICR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-overview-of-sustainable-practices-in-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      An overview of sustainable practices in computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An overview of sustainable practices in computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-carbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring carbon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#being-carbon-aware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Being carbon aware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-and-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine learning and AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring and monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-benefits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><img alt="GreenLogo" src="../assets/rse_green.png" title="GreenLogo" /> </p>
+<h1 id="sustainable-computing-at-the-icr">Sustainable Computing at the ICR</h1>
+<p>This is a collection of resources and advice on sustainable computing at the ICR. The advice comes from a collaboration between groups at the ICR engaged with the <a href="https://www.software.ac.uk/GreenDiSC">GreenDiSC initiative for sustainable computing</a>.  </p>
+<ul>
+<li>Breast Cancer Research - Data Science Team, contact <strong>Santiago Madera</strong>.  </li>
+<li>Research Software Engineering Team, contact <strong>Rachel Alcraft</strong>.  </li>
+<li>Data Science Team, contact <strong>Jacob Househam</strong>.  </li>
+</ul>
+<p>For any help or questions email <a href="mailto:schelpdesk@icr.ac.uk">scientific computing</a> and ask for the RSE team.  </p>
+<h2 id="a-quick-summary-of-practical-actions">A quick summary of practical actions</h2>
+<h3 id="what-can-you-do-to-be-more-sustainable">What can you do to be more sustainable?</h3>
+<ol>
+<li><strong>Measure your carbon footprint</strong>  The application developed by the RSE team <a href="https://software-internal.icr.ac.uk/app/green-alma">green-alma</a> is a web utility that measures the carbon cost of HPC jobs using the <a href="https://www.green-algorithms.org/">green-algorithms library</a>. It is available on the ICR network with the password and username available on request from the RSE team - contact the schelpdesk to ask. You can use this to measure your jobs and carbon use over a given period of time or job id.  </li>
+<li><strong>Write efficient code</strong> - The resources below will help you to write more efficient code and include internal training at the ICR. If your code is more efficient then it will cost less in terms of time, money and carbon.<br />
+-- <a href="https://csgillespie.github.io/efficientR/">Efficient R programming</a><br />
+-- <a href="https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-the-RStudio-IDE">Profiling R</a><br />
+-- <a href="https://www.geeksforgeeks.org/tips-to-maximize-your-python-code-performance/">Top 10 tips to maximise Python Code Performance</a><br />
+-- <a href="https://realpython.com/python-profiling/">Profiling Python</a></li>
+<li><strong>Test your code</strong> - If your code fails then it will need to be corrected and re-run which will cost. Running tests on your code will help to reduce the number of times you need to run it. Using continuous integration built into GitHub or GitLab can help with this. Do consider that the tests themselves cost, so an efficient balance is needed for how often the tests are run.<br />
+-- <a href="https://testthat.r-lib.org/">testthat for R</a><br />
+-- <a href="https://docs.pytest.org/en/stable/">pytest for python</a><br />
+Ask the RSE team for help on setting this up with continuous integration for your projects.  </li>
+<li><strong>Reuse code</strong> - Using open source community tested libraries will mean that you are using code that has been tested and is efficient. Internally built shared and tested libraries will also be an efficient use of time and resources.  </li>
+<li><strong>Check your job efficiency on the HPC</strong> - Your HPC jobs will use resources whether they are running optimally or idle. Check the efficiency of your jobs and make sure that they are running as efficiently as possible.<br />
+Check efficiency of resources: <code>seff &lt;jobid&gt;</code><br />
+Check profile of a job: <code>scontrol show jobid -dd &lt;jobid&gt;</code><br />
+More info on job scheduling on <a href="https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/userguides/Pages/Job-Scheduling.aspx">nexus</a>  </li>
+<li><strong>Developer time is expensive</strong> The time you spend optimising is a cost that should be considered. That time is also a carbon cost and a financial cost, and so you should consider the balance between the two. The cost of developer time is generally now greater than CPU time.  </li>
+<li><strong>Your work is more important</strong> - the carbon footprint of your code is important, but, as a researcher working on generally small isolated projects where code efficiency has a minimal impact on the wider world, the work you are doing is more important.</li>
+<li><strong>Storage is a big win</strong> - It may be that your biggest win in terms of carbon footprint is in storage, so consider how you can reduce the amount of data you are storing on an ongoing basis. Monitor and reduce continuously, and work with your team to embed this practice. The storage on RDS can be monitored on an interal dashboard:  <a href="http://sjane.icr.ac.uk:3000/d/Higfsdhmz/rds-fileset-information?orgId=1">RDS dashboard</a> (VPN only) will show the data used and how it changes over time. Consider how you communicate with the test of your team and collaborators on data uses and storage as managing the data with an agreed plan will be less painful than trying to understand who needs what later down the line. In conversations with your colleagues and collaborators the message about the environmental impact of data storage can be highlighted.  </li>
+<li><strong>Co-benefits</strong> - Remember that there are usually multiple advantages to anything, and these can help with your motivation. For example a more efficient algorithm will run faster and cost less financially as well as in carbon terms.  The <a href="https://software-internal.icr.ac.uk/app/green-alma">green-alma</a> app shows the financial cost as well as the carbon cost of your jobs.  </li>
+<li><strong>Record what you are doing</strong> - keep a record of what you are doing and how you are reducing your carbon footprint. This will help you to see the impact of your changes and to communicate this to others.  </li>
+</ol>
+<h3 id="what-can-scientific-computing-do-to-be-more-sustainable">What can Scientific Computing do to be more sustainable?</h3>
+<ol>
+<li>The <strong>efficiency of the data centres</strong> we use has a large impact on the carbon footprint of our work.  </li>
+<li>The ability to <strong>time-schedule jobs</strong> at periods of low energy use is important.<br />
+Currently we do not have an automatic procedure for time scheduling jobs, nor do we have out of hours support to look after jobs if they were scheduled in this way. Here we need to balance the carbon footprint of our work with the practicalities of our work and this is in progress.  </li>
+<li>The ability to <strong>measure the carbon footprint of our work</strong> is important.<br />
+We have created the <a href="https://software-internal.icr.ac.uk/app/green-alma">green-alma</a> app (VPN only) to monitor the carbon footprint of all jobs on Alma.  </li>
+</ol>
+<hr />
+<h2 id="training-and-resources">Training and Resources</h2>
+<h3 id="internal-training-at-the-icr">Internal training at the ICR</h3>
+<p>These are courses run internally at the ICR, to sign up please visit the pages linked. If there are any courses without dates, please sign on to the waiting list, and also feel free to contact the RSE team for more information.  </p>
+<ul>
+<li><a href="https://training.icr.ac.uk/coursed.php?course=1046">IEMA Sustainability at the ICR</a><br />
+Audience: All staff. As a world-leading research centre, promoting health is at the heart of what we do. We embrace opportunities to advance social, economic and environmental health in our activities and make the ICR a more sustainable organisation. Every member of staff at the ICR plays a part in helping us to achieve these goals.
+We’ve taken some major steps towards this already, like developing science-based targets to bring down our carbon emissions and using the UN Sustainable Development Goals as a framework for how we holistically approach sustainability.
+We’re inviting all members of staff to participate in these sustainability training courses. They’ll provide opportunities to develop actions and initiatives to create change in your area of work, and to learn what the ICR is doing towards sustainability.
+These courses lead to a professional certificate from IEMA, (the Institute of Environmental Management and Assessment). </li>
+<li><a href="https://training.icr.ac.uk">Software carpentries</a> 
+At the ICR, the RSE team, in collaboration with the Data Science team, deliver carpentry courses in Python, R, Git and Unix. These are designed to help you to be more efficient in your coding and to work more effectively with others, and by using best practices in coding you can reduce the carbon footprint of your work. Where we can, we use the carpentry materials from the <a href="https://software-carpentry.org/">Software Carpentry</a> organisation.<br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1200">Python</a><br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1218">R</a><br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1215">Bash</a><br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1216">Git</a><br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1217">Image processing with python</a><br />
+  -- <a href="https://training.icr.ac.uk/coursed.php?course=1219">Genomics</a><br />
+  -- Python optimisation - to be announced soon  </li>
+<li>Induction on computational sustainability - this is to be announced soon</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="https://trainingportal.linuxfoundation.org/learn/course/green-software-for-practitioners-lfc131/introduction/welcome-to-lfc131?courseId=e924bf7e-306a-449e-8a05-b09ffe963faa?courseId=e924bf7e-306a-449e-8a05-b09ffe963faa">Green Software for practitioners</a> by the Linux Foundation, a comprehensive online training course with certifcate on succesful completetion. </li>
+<li><a href="https://book.the-turing-way.org/">The Turing Way</a> a guide to sustainable software development practices.  </li>
+<li><a href="https://coderefinery.github.io/reproducible-python/">Reproducible research with python</a> from Code refinery. </li>
+<li>Some slurm docs - <a href="https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/userguides/Pages/Use-Cases.aspx">internal nexus doc</a>  and <a href="https://support.ceci-hpc.be/doc/_contents/SubmittingJobs/SlurmFAQ.html#q05-how-do-i-create-a-parallel-environment">additional FAQs</a>  </li>
+<li>Recycling of our equipment by the <a href="https://www.stonegroup.co.uk/">StoneGroup</a>  </li>
+<li>The <a href="https://virtusdatacentres.com/locations/uk/london/slough-campus">Slough Data Centre</a>  </li>
+</ul>
+<hr />
+<h2 id="an-overview-of-sustainable-practices-in-computing">An overview of sustainable practices in computing</h2>
+<p>Much of the advice comes from the book <code>Building Green Software</code> by Anne Currie, Sarah Hsu and Sara Bergman (<a href="https://www.oreilly.com/library/view/building-green-software/9781098150617/">O'Reilly</a> ).  </p>
+<h3 id="overview-of-goals">Overview of goals</h3>
+<p>The lifecycle of a software product includes the energy used in the production of the hardware, the energy used in the software development, the energy used in the operation of the software, and the energy used in the disposal of the hardware. The goal of green software is to reduce the carbon footprint of software. 
+Greenhouse gases (GHGs) are primarily carbon dioxide (CO2), methane, nitrous oxide, and fluorinated gases, with CO2 being the most problematic human emmission. To measure them in a single comparable unit we use carbon dioxide equivalent (CO2e), which we refer to as 'carbon'.</p>
+<h3 id="measuring-carbon">Measuring carbon</h3>
+<p>The carbon footprint is at all points in the lifecycle of a software project, but here we are talking about what <strong>you</strong> can do. The disposal of hardware, the purchasing and maintanenace and upgarde of the servers, the choice of data centres the energy used in those data centres are a central decision. Engagement in these decisions is welcomed and encouraged, but here we are talking about the carbon footprint of the code you write and the jobs you run.  </p>
+<p>To measure these you can keep an inventory of what you use, measure the carbon cost of your Alma jobs using green-alma and monitor your storage.  </p>
+<p>Remember that this is a small piece of the puzzle, and everything you do contributes to the overall carbon footprint of the ICR and of your own activities. How you choose to travel to work is just as important as how you write your code. </p>
+<h3 id="code-efficiency">Code efficiency</h3>
+<p>Developer time is a very expensive resource, and the efficiency of code has to be balanced against that time; the readibility of code for others; and the maintainability of the code. A pragmatic approach is recommended where awareness of the development quality is balanced against the competing demands of time and output. Reuse, testing, design and profiling are all important in this process. Please attend training courses at the ICR, read the resources and ask the RSE team for help. Use version control systems and don't be afraid that anyone is inspecting your code, this is a collective effort to try to reduce the carbon footprint of our work not a judgement on your coding skills.  </p>
+<h3 id="being-carbon-aware">Being carbon aware</h3>
+<p>Some of the big cloud providers are leading the way on carbon awareness, with Microsoft having implemented a carbon-aware Windows Update process. Carbon awareness is the understanding that not all energy is equivalent, and the time of day and the source of the energy are important. If you can move your jobs around data centres in different locations and at different times you have an opportunity to choose to use energy from renewable sources and at times when the energy is less carbon intensive. These different techniques are called demand shifting, and specfically time shifting and location shifting. </p>
+<p>However, we cannot control all these pieces as ICR users. We can control the jobs we choose to run, the efficiency of that code, the efficiency of the resource use, how well we monitor it and how we clean up the logs. We can put pressure on the ICR to adopt carbon-aware practices and to make the data centres more efficient. We can also choose to use the cloud providers that are more carbon aware. </p>
+<h3 id="operational-efficiency">Operational efficiency</h3>
+<p>Rightsizing is a buzzword, it means not overprovisioning resources and is one of the cheapest green actions that we can take. In Alma terms it can mean we don't ask for more resources than we need. Cluster scheduling, as done on slurm, means that jobs can be sumbitted and run when there is space - this builds an element of right-sizing in to our standard practices. Operational efficiency is improved by not having always-on servers but by using resources provisioned on demand. We do not use cloud services at the moment, but this could be a future way to improve operational efficiency by expanding and contracting resources as needed.</p>
+<h3 id="hardware-efficiency">Hardware efficiency</h3>
+<p>The HPC cluser is managed and upgraded on a schedule based on standard practices. The carbon cost of production and disposal need to be factored into that relatively short time period of equipment use. Extending the life of hardware is one of the best ways to reduce the carbon footprint, there is a balance to be struck between the cost of maintenance and the cost of disposal and production. </p>
+<h3 id="machine-learning-and-ai">Machine learning and AI</h3>
+<p>Improvements in hardware have been an enabler for AI and machine learning, but the carbon cost of these models is high. The size and use of models is growing, and they carry ethical implications. Generally ML models are not time critical so they can benefit from demand shifting. Also, there are many pre-trained models available so using an existing model is more efficient than training a new one. If there is not a model for your needs, transfer learning will take an existing model and adapt it to your data.</p>
+<h3 id="measuring-and-monitoring">Measuring and monitoring</h3>
+<p>When talking about the carbon costs we often talk about scopes 1-3, where scope 1 is the direct emissions from the activities of the organisation, scope 2 is the indirect emissions from the energy used by the organisation, and scope 3 is the indirect emissions from the supply chain and the use of the products. </p>
+<p>There is little clarity for what this means for software creation. But, from your persepctive as a user of the HPC facilities, your main responsibity is for the costs of your compute time and storage on Alma and RDS. These can be measured and monitored with green-alma and sjane respectively. You can take action to monitor these to understand the appropriateness of the costs. If you have very high Alma use it does not mean you are using an inappropriate amount of resources, but it is important to be aware of the costs and to be able to justify them. </p>
+<h3 id="co-benefits">Co-benefits</h3>
+<p>Eco-friendly practices have co-benefits that can help motivate you, and also sell the idea to colleagues and management.  </p>
+<ul>
+<li>Money saving - the cost of energy is a significant part of the cost of running a data centre, and so saving energy will save money.  </li>
+<li>Time saving - if the code is more efficient it will run faster and so save time.  </li>
+<li>Better code - the code will be more efficient and better tested so more reliable, easier to maintain and understand.  </li>
+<li>Better collaboration - the code will be more readable and so easier to work with others.  </li>
+<li>Better science - clearer code will be more reliable, reusable and reproducible.  </li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
