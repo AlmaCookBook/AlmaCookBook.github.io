@@ -45,6 +45,7 @@ nav:
     - 'TensorFlow-On-GPU': 'recipes/tensorflow-gpu.md'
     - 'model': 'recipes/model.md'
     - 'MuSpAn': 'recipes/muspan.md'
+    - 'Alphafold3': 'recipes/alphafold3.md'
   - FAQs:
     - 'FAQs': 'faqs/faqs.md'
   #- Training:
