@@ -38,6 +38,7 @@ nav:
     - Recipes:
       - 'nf-core sarek': 'workflows/nf-core-2.md'
       - 'epi2me-labs': 'workflows/recipe-nf-epitome.md'
+      - 'nfcore/proteinfold - alphafold3': 'workflows/nf-core-proteinfold_alphafold3.md'
   - Containers:
       - 'Singularity and docker': 'workflows/containers.md'  
   - Recipes:
