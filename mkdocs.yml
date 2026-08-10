@@ -3,7 +3,9 @@ nav:
   - Home: 'index.md'
   - About: 'about.md'
   - First Steps: 'first_steps.md'
-  - Sustainable computing: 'green.md'
+  - Sustainability: 
+    - Sustainable computing: 'sustainability/green.md'
+    - Green Alma: 'sustainability/green_alma.md'
   - Scientific tools:
     - Overview: 'tools/overview.md'
     - Container tools: 'tools/container-tools.md'

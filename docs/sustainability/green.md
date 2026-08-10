@@ -1,4 +1,4 @@
-![GreenLogo](assets/rse_green.png "GreenLogo") 
+![GreenLogo](../assets/rse_green.png "GreenLogo") 
 # Sustainable Computing at the ICR
 This is a collection of resources and advice on sustainable computing at the ICR. The advice comes from a collaboration between groups at the ICR engaged with the [GreenDiSC initiative for sustainable computing](https://www.software.ac.uk/GreenDiSC).  
 
